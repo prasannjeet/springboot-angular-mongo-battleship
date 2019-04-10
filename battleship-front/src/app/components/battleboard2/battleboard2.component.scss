@@ -1,0 +1,194 @@
+table.battleshipBoard {
+    margin: auto;
+    background: lightgrey;
+    border: 5px solid #333;
+    border-collapse: collapse; /* */
+}
+
+.shipCell {
+    background: darkgreen;
+}
+
+.attacked {
+    background: indianred;
+}
+
+.keepInCenter{
+    width: auto !important;
+    height: 100px !important;
+    margin: auto auto !important;
+    color: antiquewhite;
+}
+
+//footer
+
+.keepInCenter-bottom{
+    width: auto !important;
+    height: 40px !important;
+    margin: auto auto !important;
+    color: antiquewhite;
+}
+
+.footerText {
+    color: aliceblue;
+}
+
+td.battleshipBoard {
+    width: 50px; height: 50px;
+    border: 2px solid #333; /* */
+}
+td.battleCell {
+    border: 4px solid #333;
+}
+.test {
+    background: blue;
+}
+
+$accent1: #192441;
+$accent2: #ff4c11;
+$accent3: #f7f7f7;
+
+a {
+    link-appearance: none;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: lato;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.nav {
+    height: 130px;
+    clear: both;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #192441; /* Old browsers */
+    background: -moz-linear-gradient(45deg, #192441 0%, #252d60 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#192441), color-stop(100%,#252d60)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(45deg, #192441 0%,#252d60 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(45deg, #192441 0%,#252d60 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(45deg, #192441 0%,#252d60 100%); /* IE10+ */
+    background: linear-gradient(45deg, #192441 0%,#252d60 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#192441', endColorstr='#252d60',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+}
+
+.navBottom {
+    height: 85px;
+    clear: both;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #192441; /* Old browsers */
+    background: -moz-linear-gradient(45deg, #192441 0%, #252d60 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#192441), color-stop(100%,#252d60)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(45deg, #192441 0%,#252d60 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(45deg, #192441 0%,#252d60 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(45deg, #192441 0%,#252d60 100%); /* IE10+ */
+    background: linear-gradient(45deg, #192441 0%,#252d60 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#192441', endColorstr='#252d60',GradientType=1 ); /* IE6-8 fallback on horizontal gradient */
+}
+
+//.bborder {
+//    border-bottom: 3px solid $accent2;
+//    margin-top: 10px;
+//    width: 40px;
+//}
+
+
+// Split Screen Content
+
+.body {
+    padding-top: 50px;
+    clear: both;
+}
+
+.leftContent {
+    // height: 100vh;
+    width: 50%;
+    position: fixed;
+    float:left;
+}
+
+.leftCCon {
+    padding: 100px 50px;
+
+    h1 {
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 1.7em;
+        color: rgba($accent1, 0.7);
+    }
+
+    p {
+        font-size: 0.7em;
+        text-transform: none;
+        letter-spacing: 0;
+        font-weight: 600;
+        color: rgba($accent1, 0.5);
+    }
+}
+
+.rightContent {
+    height: 100%;
+    float: right;
+    background-color: grey;
+    width: 50%;
+    // padding: 120px 0;
+}
+
+
+//tr.chessboard:nth-child(odd) td.chessboard:nth-child(even),
+//tr.chessboard:nth-child(even) td.chessboard:nth-child(odd) {
+//    background: white;
+//}
+
+//Overlay Styles
+#overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+#overlayText{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+.ship1 {
+    background: #73683B;
+}
+
+.ship2 {
+    background: #583E23;
+}
+
+.ship3 {
+    background: #13262F;
+}
+
+.ship4 {
+    background: #FFD847;
+}
+
+.ship5 {
+    background: #634FFF;
+}

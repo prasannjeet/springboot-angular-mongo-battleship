@@ -1,0 +1,86 @@
+<!--<h3 *ngIf="userName">Welcome {{userName}}</h3>-->
+<!--<div *ngIf="initDone==false" class="initValues">-->
+<!--<p *ngIf="showErrorMessage==true">Entering Name is Mandatory</p>-->
+<!--<form [formGroup]="initForm" (ngSubmit)="submitInitForm()" novalidate>-->
+<!--<label>Enter Your Name:-->
+<!--<input type="text" class="form-control" formControlName="name" required autofocus/>-->
+<!--</label>-->
+<!--<button type="submit" class="btn btn-primary">Submit</button>-->
+<!--</form>-->
+
+<!--</div>-->
+<!--<div *ngIf="initDone==true" class=theBoard>-->
+<!--<span *ngIf="selectShipMessage">{{selectShipMessage}}</span>-->
+<!--<table class="battleshipBoard">-->
+<!--<tr *ngFor="let r of boardLength" class="battleshipBoard">-->
+<!--<td *ngFor="let c of boardLength" class="battleshipBoard battleCell"-->
+<!--[attr.id]="r.toString()+c.toString()"></td>-->
+<!--</tr>-->
+<!--</table>-->
+<!--</div>-->
+
+<!--<table>-->
+<!--<tr>-->
+<!--<td id="4" (click)="addClass($event)">1</td>-->
+<!--<td>2</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td id="5">3</td>-->
+<!--<td>4</td>-->
+<!--</tr>-->
+<!--</table>-->
+
+
+<!--====================-->
+<div id="overlay" (click)="overlayOff()">
+    <div id="overlayText">Oops! You have been disconnected from the server. Click to connect again.</div>
+</div>
+<div class="nav">
+    <h3 class="keepInCenter" *ngIf="userName">Welcome {{userName}}</h3>
+    <p class="keepInCenter">{{currentMessage}}</p>
+</div>
+
+<div class="body">
+
+    <div class="leftContent">
+        <div class='leftCCon'>
+            <div *ngIf="initDone==true" class=theBoard>
+                <span *ngIf="selectShipMessage">{{selectShipMessage}}</span>
+                <table class="battleshipBoard">
+                    <tr *ngFor="let r of boardLength" class="battleshipBoard">
+                        <td *ngFor="let c of boardLength" class="battleshipBoard battleCell"
+                            [attr.id]="'my'+r.toString()+c.toString()"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="rightContent">
+        <div class='leftCCon'>
+            <div *ngIf="initDone==false" class="initValues">
+                <p *ngIf="showErrorMessage==true">Entering Name is Mandatory</p>
+                <form [formGroup]="initForm" (ngSubmit)="submitInitForm()" novalidate>
+                    <label>Enter Your Name:
+                        <input type="text" class="form-control" formControlName="name" required autofocus/>
+                    </label>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+            <div *ngIf="initDone==true" class=theBoard>
+                <span *ngIf="selectShipMessage">{{selectShipMessage}}</span>
+                <table class="battleshipBoard">
+                    <tr *ngFor="let r of boardLength" class="battleshipBoard">
+                        <td *ngFor="let c of boardLength" class="battleshipBoard battleCell" (click)="onClick($event)"
+                            [attr.id]="'their'+r.toString()+c.toString()"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="navBottom footerText">
+        <p style="text-align:center;">Hello World</p>
+    </div>
+
+</div>
