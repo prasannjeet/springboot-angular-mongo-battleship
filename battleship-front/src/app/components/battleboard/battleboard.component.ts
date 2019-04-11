@@ -23,20 +23,21 @@ export class BattleboardComponent implements OnInit {
     private initDone: boolean;
     private showErrorMessage: boolean;
     private initForm: FormGroup;
-    private userName: string;
+    userName: string;
     private userId: string;
     private socketUrl: string;
     private boardLength;
     private selectShipMessage;
     private newBoardData;
     private clickedCells = [''];
-    private currentMessage;
+    currentMessage;
     private ws;
     private playGameUrl;
     private opponentUserId;
-    private opponentUserName;
+    opponentUserName;
     private ourTurn = false;
     private shipCellCoordinates = [];
+    gameover = false;
 
     private boardStatus = {
         userId: {},
@@ -61,7 +62,7 @@ export class BattleboardComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.currentMessage = 'Waiting for the Opponent';
+        // this.currentMessage = 'Waiting for the Opponent';
         this.userName = '';
         this.initDone = false;
         this.showErrorMessage = false;
@@ -231,6 +232,8 @@ export class BattleboardComponent implements OnInit {
                         }
                     }
                     if (stringInfo.winningMove == 'true') {
+                        this.gameover = (stringInfo.winningMove == 'true');
+                        console.log('Winning Move: '+stringInfo.winningMove);
                         this.ourTurn = false;
                         if (stringInfo.turnBy == 'p1') {
                             this.currentMessage = 'Congratulations, You Won! Refresh to play again.';

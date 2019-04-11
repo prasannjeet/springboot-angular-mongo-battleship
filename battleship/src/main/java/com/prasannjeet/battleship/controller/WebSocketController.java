@@ -100,6 +100,7 @@ public class WebSocketController {
             tempHashMap.put("attackedAt", numberPart);
             tempHashMap.put("isContainsShip", String.valueOf(isContainsShip));
             tempHashMap.put("winningMove", String.valueOf(gameInstance.getAttackedShips() >= 15));
+            gameInstanceRepository.save(gameInstance);
 
             if (gameInstance.getAttackedShips() >= 15){
                 if (isPlayerOne) {
@@ -107,13 +108,10 @@ public class WebSocketController {
                 } else  {
                     playerId = playerMatchesRepository.findOneByWebSocketAddress(socketId).getPlayer2();
                 }
+                gameInstance = gameInstanceRepository.findOneByUserId(playerId);
+                gameInstance.setWonGames(gameInstance.getWonGames() + 1);
+                gameInstanceRepository.save(gameInstance);
             }
-
-            gameInstance = gameInstanceRepository.findOneByUserId(playerId);
-            gameInstance.setWonGames(gameInstance.getWonGames() + 1);
-            gameInstanceRepository.save(gameInstance);
-
-            gameInstanceRepository.save(gameInstance);
 
             return gson.toJson(tempHashMap);
         }

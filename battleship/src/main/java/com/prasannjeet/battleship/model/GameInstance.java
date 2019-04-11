@@ -19,7 +19,7 @@ public class GameInstance {
     private BattleBoard battleBoard;
     private List ships;
     private int attackedShips;
-    private int wonGames;
+    private int wonGames = 0;
 
 //    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     public GameInstance(String userId, String userName) {

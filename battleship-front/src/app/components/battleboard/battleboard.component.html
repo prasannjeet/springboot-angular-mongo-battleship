@@ -38,7 +38,8 @@
 <div class="nav">
     <h3 class="keepInCenter" *ngIf="userName">Welcome {{userName.toLocaleUpperCase()}}</h3>
     <h2 class="keepInCenter">{{currentMessage}}</h2>
-    <h2 *ngIf="ourTurn" class="keepInCenter">Your Turn!</h2>
+    <h2 *ngIf="ourTurn && gameover == false" class="keepInCenter">Your Turn!</h2>
+    <h2 *ngIf="opponentUserName && !ourTurn && gameover == false" class="keepInCenter">Waiting for {{opponentUserName}}</h2>
 </div>
 
 <div class="body">

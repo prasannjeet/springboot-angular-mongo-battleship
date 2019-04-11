@@ -20,19 +20,20 @@ export class Battleboard2Component implements OnInit {
     private initDone: boolean;
     private showErrorMessage: boolean;
     private initForm: FormGroup;
-    private userName: string;
+    userName: string;
     private userId: string;
     private socketUrl: string;
     private boardLength;
     private selectShipMessage;
     private newBoardData;
     private clickedCells = [''];
-    private currentMessage;
+    currentMessage;
     private ws;
     private opponentUserId;
-    private opponentUserName;
+    opponentUserName;
     private shipCellCoordinates = [];
     private ourTurn;
+    gameover = false;
 
     private boardStatus = {
         userId: {},
@@ -192,6 +193,8 @@ export class Battleboard2Component implements OnInit {
                         }
                     }
                     if (stringInfo.winningMove == 'true') {
+                        this.gameover = (stringInfo.winningMove == 'true');
+                        console.log('Winning Move: '+stringInfo.winningMove);
                         this.ourTurn = false;
                         if (stringInfo.turnBy == 'p2') {
                             this.currentMessage = 'Congratulations, You Won! Refresh to play again.';
