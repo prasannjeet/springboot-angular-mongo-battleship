@@ -8,12 +8,14 @@ import {AppComponent} from './app.component';
 import {BattleboardComponent} from './components/battleboard/battleboard.component';
 import {BattleService} from './services/battle.service';
 import {Battleboard2Component} from './components/battleboard2/battleboard2.component';
+import { OnePlayerComponent } from './component/one-player/one-player.component';
 
 @NgModule({
     declarations: [
         AppComponent,
         BattleboardComponent,
         Battleboard2Component,
+        OnePlayerComponent,
     ],
     imports: [
         BrowserModule,
