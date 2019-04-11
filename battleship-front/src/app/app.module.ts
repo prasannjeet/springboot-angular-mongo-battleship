@@ -9,6 +9,7 @@ import {BattleboardComponent} from './components/battleboard/battleboard.compone
 import {BattleService} from './services/battle.service';
 import {Battleboard2Component} from './components/battleboard2/battleboard2.component';
 import { OnePlayerComponent } from './component/one-player/one-player.component';
+import { ScoreTableComponent } from './components/score-table/score-table.component';
 
 @NgModule({
     declarations: [
@@ -16,6 +17,7 @@ import { OnePlayerComponent } from './component/one-player/one-player.component'
         BattleboardComponent,
         Battleboard2Component,
         OnePlayerComponent,
+        ScoreTableComponent,
     ],
     imports: [
         BrowserModule,
