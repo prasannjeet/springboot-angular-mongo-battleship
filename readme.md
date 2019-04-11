@@ -66,3 +66,7 @@ The controller is responsible for communicating with the angular application at 
 - **WebSocketController** Responsible for communication between the web-apps via websocket. It primarily has just one method, the `processMessageFromClient()`. It is responsible for all the communication between the clients. Both the clients are subscribed to this socket and send all the information, such as whether the player board is initialized or if the player has taken her turn, etc. Both the client subscribe to the same socket.
 
 Further, the `Repository` package contains repositories for the models persisted in MongoDB that were discussed above. The `config` class contains other configurations for websocket. The other class `Security Config` will contain security configurations, which have not been implemented fully yet. The `application.properties` file in the `resources` folder contains other configurations, such as MongoDB location, etc. The `logics` package contains program logic. Although a lot of processing happens in the `GameInstance` model itself, the `logics` package is responsible for converting the `GameInstance` into a more consise format that can be easily read when sent to the clients.
+
+## The Class Diagram
+
+![BattleShip-Server Class Diagram](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/class.svg)
