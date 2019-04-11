@@ -197,9 +197,9 @@ export class Battleboard2Component implements OnInit {
                         console.log('Winning Move: '+stringInfo.winningMove);
                         this.ourTurn = false;
                         if (stringInfo.turnBy == 'p2') {
-                            this.currentMessage = 'Congratulations, You Won! Refresh to play again.';
+                            this.currentMessage = 'Congratulations, You Won! Close this window.';
                         } else {
-                            this.currentMessage = 'Bad Luck! ' + this.opponentUserName + ' won! Refresh to play again.';
+                            this.currentMessage = 'Bad Luck! ' + this.opponentUserName + ' won! Close this window.';
                         }
 
                     }

@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - BattleshipApplication",
+            "request": "launch",
+            "mainClass": "com.prasannjeet.battleship.BattleshipApplication",
+            "projectName": "battleship"
+        }
+    ]
+}
