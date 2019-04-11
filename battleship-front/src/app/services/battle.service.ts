@@ -25,6 +25,10 @@ export class BattleService {
     getPlayer2Id(sockId) {
         return this.http.get('/server/api/v1/battle/getPlayer2Id/' + sockId);
     }
+
+    getAllPlayerData() {
+        return this.http.get('/server/api/v1/battle/getAll/');
+    }
     // connectPlayer(message) {
     //
     // }
