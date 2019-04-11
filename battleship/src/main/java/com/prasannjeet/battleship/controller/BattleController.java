@@ -34,8 +34,10 @@ public class BattleController {
         this.playerMatchesRepository = playerMatchesRepository;
     }
 
+    //to get all table value
     @RequestMapping(value = "/getAll")
     public String getAllItems() {
+        System.out.println("get all");
         List<GameInstance> allItems = gameInstanceRepository.findAll();
         HashMap<String, String> returnItem = new HashMap<>();
         for (GameInstance theItem : allItems) {
