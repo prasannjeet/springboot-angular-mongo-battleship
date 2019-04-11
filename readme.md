@@ -5,7 +5,8 @@ A web-based battleship game that uses Spring in the backend and Angular in the f
 - Angular 7.2.12
 - MongoDB 4.0.8
 - Websockets used for web-app conversations.
-- REST api used for client-server conversations.
+- RESTful API used for client-server conversations.
+- Bootstrap for the design.
 - Spring dependencies can be checked [here](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/battleship/pom.xml).
 - Angular dependencies can be checked [here](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/battleship-front/package.json).
 
@@ -16,23 +17,31 @@ To play the game, open your broser at http://localhost:4200/battleboard after co
 The folder `battleship` contains the spring boot server, and `battleship-front` has the angular front-end files. The spring project uses `maven` as it's package manager, were as the angular project uses `yarn` as it's package manager.
 
 ### To run the server
-- Download the folder `battleship`.
-- Import as a `maven` project in IntellIJ or Eclipse, or any other IDE.
-- Import all the dependencies.
-- Simply run `com.prasannjeet.battleship.BattleshipApplication.java` as an application.
-- The Spring server should now be listening at http://localhost:8080
+
+- In the project folder, run:
+    1. `mvn clean install`
+    2. `mvn spring-boot:run`
+
+The Spring server should now be listening at http://localhost:8080
 
 ### To run the application
-- Make sure `Angular`, `node`, `npm`, `mongoDB` is installed.
-- As this project uses `yarn` as a package manager, make sure it is [installed](https://yarnpkg.com/lang/en/docs/install).
-- At the project root, run `yarn upgrade` to update all the packages.
-- The project may run with `npm install`, but I am not sure!
-- Run `npm start` to start the angular server. The game can now be played at http://localhost:4200/battleboard.
+- In the project folder, run:
+    1. `yarn upgrade`
+    2. `yarn run start`
+
+This will start the angular server. The game can be played at http://localhost:4200/battleboard
+
+#### Prerequisits
+- Make sure `Angular`, `node`, `npm`, `mongoDB`, `maven` is installed.
+- As the angular project uses `yarn` as a package manager, make sure it is [installed](https://yarnpkg.com/lang/en/docs/install).
+
 
 ## Time Taken
 Total time taken to build the game was 14-15 hours.
 
 ## Limitations
+One or many of these limitations could have been resolved with more time in hand.
+
 - No validations have been done in the text boxes. As a result, the game might fail if username contains characters other than alphabets and numerals.
 - Currently, the game will run only in localhost.
 - No tests have been implemented yet.
@@ -70,3 +79,19 @@ Further, the `Repository` package contains repositories for the models persisted
 ## The Class Diagram
 
 ![BattleShip-Server Class Diagram](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/class.svg)
+
+## Angular Front-End
+The front-end was built in angular as it makes it easier and organized for bigger applications. Although Battleship is a small game, dividing various parts into components will make it easy to upgrade in future. There two components in this applicaton:
+
+1. BattleBoard, and
+2. BattleBoard2
+
+Both are the same design and almost same functions. They are the main web-app for player1, and player2. The game always works in pairs; when the first component is instantiated, it contains a link, which when clicked, instantiates the second component.
+
+The application is built with a minimal design where the left part contains the player's board with her ship positions that were initialized randomly. Further, the right half contains an empty board through which the other player can be attacked by clicking a particular cell.
+
+![Game-View](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/gameView.png)
+
+The applications initially requests a username, which is then used as a unique-id. If a user uses the same name in another instance, their win-count will be updated in the repository.
+
+![Welcome-Page](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/welcomePage.png)
