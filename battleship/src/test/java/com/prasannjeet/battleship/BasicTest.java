@@ -1,4 +1,4 @@
-package com.prasannjeet.battleship.test;
+package com.prasannjeet.battleship;
 
 
 import io.restassured.RestAssured;
@@ -12,9 +12,6 @@ import static org.junit.Assert.assertTrue;
 public class BasicTest {
     @Test
     public void givenUserWithWrongIP_whenGetFooById_thenForbidden() {
-
-//        Response response = server.newRequest("/battleboard");
-//        assertEquals(Response.Status.OK.getStatusCode(), response.getStatus());
         assertTrue(true);
     }
 
