@@ -32,6 +32,7 @@ export class Battleboard2Component implements OnInit {
     private opponentUserId;
     private opponentUserName;
     private shipCellCoordinates = [];
+    private ourTurn;
 
     private boardStatus = {
         userId: {},
@@ -110,13 +111,16 @@ export class Battleboard2Component implements OnInit {
 
     onClick(event) {
         const value = (event.target || event.srcElement || event.currentTarget).attributes.id.nodeValue;
-        if (!this.clickedCells.includes(value)) {
-            this.currentMessage = '';
-            this.clickedCells.push(value);
-            Battleboard2Component.highlightCells([value], 'attacked');
-            this.sendName('pt'+value);
-        } else {
-            this.currentMessage = 'You have already attacked there!';
+        if (this.ourTurn) {
+            if (!this.clickedCells.includes(value)) {
+                this.ourTurn = false;
+                this.currentMessage = '';
+                this.clickedCells.push(value);
+                Battleboard2Component.highlightCells([value], 'attacked');
+                this.sendName('pt'+value);
+            } else {
+                this.currentMessage = 'You have already attacked there!';
+            }
         }
     }
 
@@ -169,8 +173,34 @@ export class Battleboard2Component implements OnInit {
                 alert('Error ' + message.body);
             });
             that.ws.subscribe('/topic/reply/' + this.socketUrl, message => {
-                // console.log('/topic/reply/' + this.socketUrl);
-                // console.log('pjRECEIVED ' + JSON.stringify(message));
+                if (message.body == 'start') {
+                    this.ourTurn = true;
+                } else {
+                    const stringInfo = JSON.parse(message.body);
+                    if (stringInfo.turnBy == 'p2') {
+                        this.ourTurn = false;
+                        if (stringInfo.isContainsShip == 'true') {
+                            Battleboard2Component.highlightCells(['their' + stringInfo.attackedAt], 'attackedWithShip');
+                        }
+                    }
+                    if (stringInfo.turnBy == 'p1') {
+                        this.ourTurn = true;
+                        if (stringInfo.isContainsShip == 'true') {
+                            Battleboard2Component.highlightCells(['my' + stringInfo.attackedAt], 'attackedWithShip');
+                        } else {
+                            Battleboard2Component.highlightCells(['my' + stringInfo.attackedAt], 'attacked');
+                        }
+                    }
+                    if (stringInfo.winningMove == 'true') {
+                        this.ourTurn = false;
+                        if (stringInfo.turnBy == 'p2') {
+                            this.currentMessage = 'Congratulations, You Won! Refresh to play again.';
+                        } else {
+                            this.currentMessage = 'Bad Luck! ' + this.opponentUserName + ' won! Refresh to play again.';
+                        }
+
+                    }
+                }
             });
             this.sendName('start');
         }, error => {
@@ -191,7 +221,6 @@ export class Battleboard2Component implements OnInit {
             name: value
         });
         this.ws.send('/app/message/' + this.socketUrl, {}, data);
-        console.log("SEND-SEND");
     }
 
     overlayOn() {

@@ -69,6 +69,7 @@ public class WebSocketController {
         String messageBody = gson.fromJson(message, Map.class).get("name").toString();
         String textPart = "", numberPart = "";
         String playerId = "";
+        boolean isPlayerOne = false;
         System.out.println("debug: "+socketId);
         if (!(messageBody.equals("start") || messageBody.equals("won") || messageBody.equals("lost"))) {
             System.out.println("one");
@@ -82,6 +83,7 @@ public class WebSocketController {
 //                    System.out.println("three");
                 playerId = playerMatchesRepository.findOneByWebSocketAddress(socketId).getPlayer2();
                 tempHashMap.put("turnBy", "p1");
+                isPlayerOne = true;
             }
             else if (textPart.equals("pttheir")) {
 //                if (playerMatchesRepository.findOneByWebSocketAddress(socketId).getPlayer2() == null)
@@ -90,13 +92,26 @@ public class WebSocketController {
 //                System.out.println("p2 "+playerId);
 //                System.out.println("p1 "+playerMatchesRepository.findOneByWebSocketAddress(socketId).getPlayer1());
                 tempHashMap.put("turnBy", "p2");
+                isPlayerOne = false;
             }
 //            if (gameInstanceRepository.findOneByUserId(playerId) == null) System.out.println("five");
             GameInstance gameInstance = gameInstanceRepository.findOneByUserId(playerId);
             boolean isContainsShip = gameInstance.enemyTurn(Integer.parseInt(numberPart));
             tempHashMap.put("attackedAt", numberPart);
             tempHashMap.put("isContainsShip", String.valueOf(isContainsShip));
-            tempHashMap.put("winningMove", String.valueOf(gameInstance.getAttackedShips() == 15));
+            tempHashMap.put("winningMove", String.valueOf(gameInstance.getAttackedShips() >= 15));
+
+            if (gameInstance.getAttackedShips() >= 15){
+                if (isPlayerOne) {
+                    playerId = playerMatchesRepository.findOneByWebSocketAddress(socketId).getPlayer1();
+                } else  {
+                    playerId = playerMatchesRepository.findOneByWebSocketAddress(socketId).getPlayer2();
+                }
+            }
+
+            gameInstance = gameInstanceRepository.findOneByUserId(playerId);
+            gameInstance.setWonGames(gameInstance.getWonGames() + 1);
+            gameInstanceRepository.save(gameInstance);
 
             gameInstanceRepository.save(gameInstance);
 

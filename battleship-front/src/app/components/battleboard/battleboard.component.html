@@ -36,8 +36,9 @@
     <div id="overlayText">.</div>
 </div>
 <div class="nav">
-    <h3 class="keepInCenter" *ngIf="userName">Welcome {{userName}}</h3>
-    <p class="keepInCenter">{{currentMessage}}</p>
+    <h3 class="keepInCenter" *ngIf="userName">Welcome {{userName.toLocaleUpperCase()}}</h3>
+    <h2 class="keepInCenter">{{currentMessage}}</h2>
+    <h2 *ngIf="ourTurn" class="keepInCenter">Your Turn!</h2>
 </div>
 
 <div class="body">
@@ -81,7 +82,7 @@
 
     <div class="navBottom footerText">
         <h4 *ngIf="opponentUserName" style="text-align:center;">{{opponentUserName}} Has Joined The Game!</h4>
-        <p *ngIf="playGameUrl">Ask your friend to join by clicking on <a [href]="playGameUrl">this link.</a></p>
+        <h4 *ngIf="playGameUrl && !opponentUserName" style="text-align:center;">Ask your friend to join by clicking on <a [href]="playGameUrl" target="_blank">THIS LINK.</a></h4>
     </div>
 
 </div>

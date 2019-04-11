@@ -19,6 +19,7 @@ public class GameInstance {
     private BattleBoard battleBoard;
     private List ships;
     private int attackedShips;
+    private int wonGames;
 
 //    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
     public GameInstance(String userId, String userName) {
@@ -36,6 +37,7 @@ public class GameInstance {
         }
         this.userName = userName;
         attackedShips = 0;
+        wonGames = 0;
     }
 
     @SneakyThrows(NullPointerException.class)

@@ -37,7 +37,8 @@
 </div>
 <div class="nav">
     <h3 class="keepInCenter" *ngIf="userName">Welcome {{userName}}</h3>
-    <p class="keepInCenter">{{currentMessage}}</p>
+    <h2 class="keepInCenter">{{currentMessage}}</h2>
+    <h2 *ngIf="ourTurn" class="keepInCenter">Your Turn!</h2>
 </div>
 
 <div class="body">
@@ -80,7 +81,7 @@
     </div>
 
     <div class="navBottom footerText">
-        <p style="text-align:center;">Hello World</p>
+        <h4 style="text-align:center;">You are playing against {{opponentUserName}}</h4>
     </div>
 
 </div>

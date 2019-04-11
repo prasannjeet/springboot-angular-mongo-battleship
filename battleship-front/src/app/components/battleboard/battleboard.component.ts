@@ -120,6 +120,7 @@ export class BattleboardComponent implements OnInit {
         const value = (event.target || event.srcElement || event.currentTarget).attributes.id.nodeValue;
         if (this.ourTurn) {
             if (!this.clickedCells.includes(value)) {
+                this.ourTurn = false;
                 this.currentMessage = '';
                 this.clickedCells.push(value);
                 BattleboardComponent.highlightCells([value], 'attacked');
@@ -127,8 +128,6 @@ export class BattleboardComponent implements OnInit {
             } else {
                 this.currentMessage = 'You have already attacked there!';
             }
-        } else {
-            this.currentMessage = 'Please wait for the Opponent';
         }
     }
 
@@ -184,7 +183,7 @@ export class BattleboardComponent implements OnInit {
             that.ws.subscribe('/topic/reply/' + this.socketUrl, message => {
                 // const reg = new RegExp('@\'[\d-]\'');
                 // const newString = message.body.replace(reg, {});
-                console.log('prasannjeetTest ' + message.body);
+                // console.log('prasannjeetTest ' + message.body);
                 let tempdata;
                 let tempUserNameObject;
                 if (message.body === 'start') {
@@ -205,7 +204,7 @@ export class BattleboardComponent implements OnInit {
                                         console.error(error);
                                     }, () => {
                                         this.opponentUserName = tempUserNameObject.userName;
-                                        this.currentMessage = 'It\'s Your Turn';
+                                        // this.currentMessage = 'Waiting for '+this.opponentUserName.toUpperCase();
                                     });
                                 // }, 1500);
 
@@ -218,11 +217,13 @@ export class BattleboardComponent implements OnInit {
                     if (stringInfo.turnBy == 'p1') {
                         if (stringInfo.isContainsShip == 'true') {
                             this.ourTurn = false;
+                            // this.currentMessage = 'Waiting for '+this.opponentUserName.toUpperCase();
                             BattleboardComponent.highlightCells(['their' + stringInfo.attackedAt], 'attackedWithShip');
                         }
                     }
                     if (stringInfo.turnBy == 'p2') {
                         this.ourTurn = true;
+                        // this.currentMessage = 'Your turn now!';
                         if (stringInfo.isContainsShip == 'true') {
                             BattleboardComponent.highlightCells(['my' + stringInfo.attackedAt], 'attackedWithShip');
                         } else {
@@ -232,9 +233,9 @@ export class BattleboardComponent implements OnInit {
                     if (stringInfo.winningMove == 'true') {
                         this.ourTurn = false;
                         if (stringInfo.turnBy == 'p1') {
-                            this.currentMessage = 'Congratulations, You Won!';
+                            this.currentMessage = 'Congratulations, You Won! Refresh to play again.';
                         } else {
-                            this.currentMessage = 'Bad Luck! ' + this.opponentUserName + ' won!';
+                            this.currentMessage = 'Bad Luck! ' + this.opponentUserName + ' won! Refresh to play again.';
                         }
 
                     }
@@ -250,7 +251,6 @@ export class BattleboardComponent implements OnInit {
                     // }
                     // }
 
-                    console.log(JSON.parse(message.body));
                 }
 
 
