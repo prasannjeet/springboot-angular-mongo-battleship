@@ -39,6 +39,12 @@ public class GameInstance {
         attackedShips = 0;
         wonGames = 0;
     }
+//
+//    public GameInstance (String userId, String userName, int wonGames) {
+//        this.userId = userId;
+//        this.userName = userName;
+//        this.wonGames = wonGames;
+//    }
 
     @SneakyThrows(NullPointerException.class)
     public void setRandomPositions(BattleBoard battleBoard, Ship ship) {
@@ -113,4 +119,13 @@ public class GameInstance {
         }
         else return false;
     }
+
+    public BattleBoard getBattleBoard() {
+        return battleBoard;
+    }
+
+    public List getShips() {
+        return ships;
+    }
+
 }

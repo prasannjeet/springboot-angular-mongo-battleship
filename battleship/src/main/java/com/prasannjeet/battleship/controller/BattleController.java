@@ -49,7 +49,7 @@ public class BattleController {
     }
 
     @RequestMapping(value ="/newgame/{username}")
-    public GameModel read (@PathVariable String username) {
+    public GameModel initPlayer1 (@PathVariable String username) {
         GameModel gameModel = new GameModel(UUID.randomUUID().toString(), username);
         GameInstance gameInstance = new GameInstance(gameModel.getUserId(), username);
         gameModel = ModelConversion.convertGameInstance(gameModel, gameInstance);
