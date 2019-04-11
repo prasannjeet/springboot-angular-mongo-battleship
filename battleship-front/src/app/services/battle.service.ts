@@ -27,7 +27,7 @@ export class BattleService {
     }
 
     getAllPlayerData() {
-        return this.http.get('/server/api/v1/battle/getAll/');
+        return this.http.get('/server/api/v1/battle/getAll');
     }
     // connectPlayer(message) {
     //

@@ -34,6 +34,18 @@ public class BattleController {
         this.playerMatchesRepository = playerMatchesRepository;
     }
 
+    @RequestMapping(value = "/getAll")
+    public String getAllItems() {
+        List<GameInstance> allItems = gameInstanceRepository.findAll();
+        HashMap<String, String> returnItem = new HashMap<>();
+        for (GameInstance theItem : allItems) {
+            if (theItem.getWonGames() > 0) {
+                returnItem.put(theItem.getUserName(), Integer.toString(theItem.getWonGames()));
+            }
+        }
+        return gson.toJson(returnItem);
+    }
+
     @RequestMapping(value ="/newgame/{username}")
     public GameModel read (@PathVariable String username) {
         GameModel gameModel = new GameModel(UUID.randomUUID().toString(), username);
