@@ -90,7 +90,7 @@ export class BattleboardComponent implements OnInit {
         this.userName = this.initForm.get('name').value.trim();
         if (this.userName) {
             this.initDone = true;
-            this.initializeBoard(this.userName, () => {
+            this.initializeBoard(this.userName.toLowerCase(), () => {
                     this.connect();
                 });
         } else {
@@ -233,7 +233,7 @@ export class BattleboardComponent implements OnInit {
                     }
                     if (stringInfo.winningMove == 'true') {
                         this.gameover = (stringInfo.winningMove == 'true');
-                        console.log('Winning Move: '+stringInfo.winningMove);
+                        console.log('Winning Move: ' + stringInfo.winningMove);
                         this.ourTurn = false;
                         if (stringInfo.turnBy == 'p1') {
                             this.currentMessage = 'Congratulations, You Won! Refresh to play again.';

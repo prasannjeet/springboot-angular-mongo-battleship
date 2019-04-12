@@ -45,3 +45,7 @@ battleship-front/typings
 # System Files
 .DS_Store
 Thumbs.db
+
+#GIT
+.git/*
+.gitignore

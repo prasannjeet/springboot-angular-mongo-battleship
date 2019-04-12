@@ -94,6 +94,7 @@ Further, the application has one service, `BattleService` that handles all the R
 - Apart from the enemy's board, users can also see their own board and the ship positions. 
 - The enemy attacks on a player's board are also marked. 
 - If the enemy attacks correctly on a ship, a "fire" symbol appears in that positions.
+- A scorecard, as mentioned above, is also implemented.
 
 ## Limitations
 One or many of these limitations could have been resolved with more time in hand.
@@ -105,6 +106,7 @@ One or many of these limitations could have been resolved with more time in hand
 - There is no AI opponent currently.
 - The design of the application can be improved.
 - If the browser is closed, there is no way to go back to the game.
+- If the second player loggs in with the same username as the first player, the game might not function correctly. At the moment, there is no validation built for this.
 
 ## Improvements
 - The two components for playing a game can be clubbed into one, as most of the functionalities, and design are identical.
