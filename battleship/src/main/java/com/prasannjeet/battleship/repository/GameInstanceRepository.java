@@ -8,4 +8,6 @@ import java.util.List;
 public interface GameInstanceRepository extends MongoRepository<GameInstance, String> {
     public GameInstance findOneByUserId(String userId);
     public List<GameInstance> findAll();
+    public boolean existsByUserName(String userName);
+    public GameInstance findOneByUserName(String username);
 }

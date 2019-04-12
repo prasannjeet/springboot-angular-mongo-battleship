@@ -17,22 +17,22 @@ export class Battleboard2Component implements OnInit {
     constructor(private battleService: BattleService, private route: ActivatedRoute) {
     }
 
-    private initDone: boolean;
-    private showErrorMessage: boolean;
-    private initForm: FormGroup;
+    initDone: boolean;
+    showErrorMessage: boolean;
+    initForm: FormGroup;
     userName: string;
-    private userId: string;
-    private socketUrl: string;
-    private boardLength;
-    private selectShipMessage;
-    private newBoardData;
-    private clickedCells = [''];
+    userId: string;
+    socketUrl: string;
+    boardLength;
+    selectShipMessage;
+    newBoardData;
+    clickedCells = [''];
     currentMessage;
-    private ws;
-    private opponentUserId;
+    ws;
+    opponentUserId;
     opponentUserName;
-    private shipCellCoordinates = [];
-    private ourTurn;
+    shipCellCoordinates = [];
+    ourTurn;
     gameover = false;
 
     private boardStatus = {

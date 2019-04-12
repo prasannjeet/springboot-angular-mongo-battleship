@@ -44,8 +44,17 @@ public class WebSocketController {
     @RequestMapping(value ="/playWithFriend/{username}/{socketUrl}")
     @SneakyThrows(Exception.class)
     public GameModel initPlayer2 (@PathVariable String username, @PathVariable String socketUrl) {
+        GameInstance gameInstance;
         GameModel gameModel = new GameModel(UUID.randomUUID().toString(), username);
-        GameInstance gameInstance = new GameInstance(gameModel.getUserId(), username);
+
+        if (gameInstanceRepository.existsByUserName(username)){
+            gameInstance = gameInstanceRepository.findOneByUserName(username);
+            gameInstance = new GameInstance(gameModel.getUserId(), gameInstance.getUserName(), gameInstance.getWonGames(), gameInstance.getLostGames());
+        }
+
+        else {
+            gameInstance = new GameInstance(gameModel.getUserId(), username);
+        }
         gameModel = ModelConversion.convertGameInstance(gameModel, gameInstance);
         gameInstanceRepository.save(gameInstance);
 

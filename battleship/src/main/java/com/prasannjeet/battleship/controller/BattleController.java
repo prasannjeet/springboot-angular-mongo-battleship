@@ -50,8 +50,15 @@ public class BattleController {
 
     @RequestMapping(value ="/newgame/{username}")
     public GameModel initPlayer1 (@PathVariable String username) {
+        GameInstance gameInstance;
         GameModel gameModel = new GameModel(UUID.randomUUID().toString(), username);
-        GameInstance gameInstance = new GameInstance(gameModel.getUserId(), username);
+        if (gameInstanceRepository.existsByUserName(username)){
+            gameInstance = gameInstanceRepository.findOneByUserName(username);
+            gameInstance = new GameInstance(gameModel.getUserId(), gameInstance.getUserName(), gameInstance.getWonGames(), gameInstance.getLostGames());
+        }
+        else {
+            gameInstance = new GameInstance(gameModel.getUserId(), username);
+        }
         gameModel = ModelConversion.convertGameInstance(gameModel, gameInstance);
         gameInstanceRepository.save(gameInstance);
         PlayerMatches playerMatches = new PlayerMatches(gameInstance.getUserId());

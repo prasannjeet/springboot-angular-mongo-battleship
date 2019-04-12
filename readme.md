@@ -39,22 +39,6 @@ This will start the angular server. The game can be played at http://localhost:4
 ## Time Taken
 Total time taken to build the game was 14-15 hours.
 
-## Limitations
-One or many of these limitations could have been resolved with more time in hand.
-
-- No validations have been done in the text boxes. As a result, the game might fail if username contains characters other than alphabets and numerals.
-- Currently, the game will run only in localhost.
-- No tests have been implemented yet.
-- There is no AI opponent currently.
-- The design of the application can be improved.
-
-## Design Inspirations
-- The battleship board design was inspired from the chessboard design discussed [here](https://stackoverflow.com/questions/39008253/draw-chessboard-with-frame-with-pure-html-and-css) by `caco` and `pol`. This was later extensively modified, and was also adapted fro Angular.
-- The idea for two-columned game layout was taken from [here](https://codepen.io/lukemeyrick/pen/gppveo), made by `Luke Meyrick`.
-- The design for scorecard table was taken from [here](https://codepen.io/ivillamil/pen/jWjgzE), made by `Ivan Villamil`.
-- Websites such as
-- Websites such as `angular.io`, `spring.io`, `stackoverflow.com` were extensively referenced.
-
 # About
 ## Spring Boot Backend
 The project follows MVC Design Pattern. The `model` package contains all the models. Cookies or Sessions are not used. The server persists the game data in it's database, and remembers the players via the websocket messages.
@@ -80,6 +64,8 @@ Further, the `Repository` package contains repositories for the models persisted
 
 ![BattleShip-Server Class Diagram](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/class.svg)
 
+The yellow nodes represent packages and blue nodes represent classes.
+
 ## Angular Front-End
 The front-end was built in angular as it makes it easier and organized for bigger applications. Although Battleship is a small game, dividing various parts into components will make it easy to upgrade in future. There two components in this applicaton:
 
@@ -103,3 +89,23 @@ The third component displays the scorecard. It contains two columns displaying t
 ![Score-Table](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/scoreTable.png)
 
 Further, the application has one service, `BattleService` that handles all the REST api calls. Websocket communications are handled by component themselves. The application uses `Routing` to toggle between different components in the application using pseudo URL's generated.
+
+## Limitations
+One or many of these limitations could have been resolved with more time in hand.
+
+- No validations have been done in the text boxes. As a result, the game might fail if username contains characters other than alphabets and numerals.
+- Currently, the game will run only in localhost.
+- No tests have been implemented yet.
+- There is no AI opponent currently.
+- The design of the application can be improved.
+- If the browser is closed, there is no way to go back to the game.
+
+## Improvements
+- The two components for playing a game can be clubbed into one, as most of the functionalities, and design are identical.
+
+## Design Inspirations
+- The battleship board design was inspired from the chessboard design discussed [here](https://stackoverflow.com/questions/39008253/draw-chessboard-with-frame-with-pure-html-and-css) by `caco` and `pol`. This was later extensively modified, and was also adapted fro Angular.
+- The idea for two-columned game layout was taken from [here](https://codepen.io/lukemeyrick/pen/gppveo), made by `Luke Meyrick`.
+- The design for scorecard table was taken from [here](https://codepen.io/ivillamil/pen/jWjgzE), made by `Ivan Villamil`.
+- Websites such as
+- Websites such as `angular.io`, `spring.io`, `stackoverflow.com` were extensively referenced.

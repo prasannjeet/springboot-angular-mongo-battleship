@@ -20,10 +20,16 @@ public class GameInstance {
     private List ships;
     private int attackedShips;
     private int wonGames = 0;
+    private int lostGames = 0;
 
 //    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    //Game instance constructor for a new player
     public GameInstance(String userId, String userName) {
         this.userId = userId;
+        this.userName = userName;
+        this.attackedShips = 0;
+        this.wonGames = 0;
+        this.lostGames = 0;
         this.battleBoard = new BattleBoard();
         ships = new ArrayList<Ship>() {{
             add(new Ship(5, Ship.ShipNameList.CARRIER));
@@ -35,16 +41,27 @@ public class GameInstance {
         for (Object ship : ships) {
             setRandomPositions(battleBoard, (Ship) ship);
         }
-        this.userName = userName;
-        attackedShips = 0;
-        wonGames = 0;
     }
-//
-//    public GameInstance (String userId, String userName, int wonGames) {
-//        this.userId = userId;
-//        this.userName = userName;
-//        this.wonGames = wonGames;
-//    }
+
+    //game instance constructor for a recurring player
+    public GameInstance (String userId, String userName, int wonGames, int lostGames) {
+        this.userId = userId;
+        this.userName = userName;
+        this.attackedShips = 0;
+        this.wonGames = wonGames;
+        this.lostGames = lostGames;
+        this.battleBoard = new BattleBoard();
+        ships = new ArrayList<Ship>() {{
+            add(new Ship(5, Ship.ShipNameList.CARRIER));
+            add(new Ship(4, Ship.ShipNameList.CRUISER));
+            add(new Ship(3, Ship.ShipNameList.SUBMARINE));
+            add(new Ship(2, Ship.ShipNameList.DESTROYER));
+            add(new Ship(1, Ship.ShipNameList.ATTACKER));
+        }};
+        for (Object ship : ships) {
+            setRandomPositions(battleBoard, (Ship) ship);
+        }
+    }
 
     @SneakyThrows(NullPointerException.class)
     public void setRandomPositions(BattleBoard battleBoard, Ship ship) {
