@@ -90,9 +90,15 @@ The third component displays the scorecard. It contains two columns displaying t
 
 Further, the application has one service, `BattleService` that handles all the REST api calls. Websocket communications are handled by component themselves. The application uses `Routing` to toggle between different components in the application using pseudo URL's generated.
 
+## Features
+- Apart from the enemy's board, users can also see their own board and the ship positions. 
+- The enemy attacks on a player's board are also marked. 
+- If the enemy attacks correctly on a ship, a "fire" symbol appears in that positions.
+
 ## Limitations
 One or many of these limitations could have been resolved with more time in hand.
 
+- The board is set randomly for all the players currently.
 - No validations have been done in the text boxes. As a result, the game might fail if username contains characters other than alphabets and numerals.
 - Currently, the game will run only in localhost.
 - No tests have been implemented yet.
@@ -107,5 +113,4 @@ One or many of these limitations could have been resolved with more time in hand
 - The battleship board design was inspired from the chessboard design discussed [here](https://stackoverflow.com/questions/39008253/draw-chessboard-with-frame-with-pure-html-and-css) by `caco` and `pol`. This was later extensively modified, and was also adapted fro Angular.
 - The idea for two-columned game layout was taken from [here](https://codepen.io/lukemeyrick/pen/gppveo), made by `Luke Meyrick`.
 - The design for scorecard table was taken from [here](https://codepen.io/ivillamil/pen/jWjgzE), made by `Ivan Villamil`.
-- Websites such as
 - Websites such as `angular.io`, `spring.io`, `stackoverflow.com` were extensively referenced.
