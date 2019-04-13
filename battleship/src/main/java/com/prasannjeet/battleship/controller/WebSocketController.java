@@ -79,9 +79,9 @@ public class WebSocketController {
         String textPart = "", numberPart = "";
         String playerId = "";
         boolean isPlayerOne = false;
-        System.out.println("debug: "+socketId);
+        // System.out.println("debug: "+socketId);
         if (!(messageBody.equals("start") || messageBody.equals("won") || messageBody.equals("lost"))) {
-            System.out.println("one");
+            // System.out.println("one");
             textPart = messageBody.replaceAll("\\d","");
             numberPart = messageBody.replace(textPart, "");
             HashMap<String, String> tempHashMap = new HashMap<>();

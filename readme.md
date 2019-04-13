@@ -1,4 +1,9 @@
+Note: This app has been updated after the submission. An earlier snapshot of the application can be obtained from [here](https://github.com/prasannjeet/springboot-angular-mongo-battleship/tree/585201e7b62f6ec1759f9bdb6af60addd0f666bd).
+
 # Battleship
+
+#### The application is deployed in Heroku and can be viewed [here](https://battlefield-spring.herokuapp.com/#/battleboard).
+
 A web-based battleship game that uses Spring in the backend and Angular in the front. MongoDB was used for persisting the data. The project follows Model-View-Control Design Pattern. Technologies used at a glance:
 
 - Spring Boot 2.1.4
@@ -84,7 +89,7 @@ The applications initially requests a username, which is then used as a unique-i
 
 ![Welcome-Page](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/welcomePage.png)
 
-The third component displays the scorecard. It contains two columns displaying the user-name and the number of times they have won the game. For a user to quality having their name in the score-card, they should have, at least once, won a game.
+The third component displays the scorecard. It contains three columns displaying the user-name, the number of times they have lost the game and won the game. For a user to have their name in the score-card, they should have, at least once completed the game fully.
 
 ![Score-Table](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/scoreTable.png)
 
@@ -101,7 +106,8 @@ One or many of these limitations could have been resolved with more time in hand
 
 - The board is set randomly for all the players currently.
 - No validations have been done in the text boxes. As a result, the game might fail if username contains characters other than alphabets and numerals.
-- Currently, the game will run only in localhost.
+- ~~Currently, the game will run only in localhost.~~
+- The game is now deployed [here](https://battlefield-spring.herokuapp.com/#/battleboard) after a few tweaks in server routing configurations.
 - No tests have been implemented yet.
 - There is no AI opponent currently.
 - The design of the application can be improved.
