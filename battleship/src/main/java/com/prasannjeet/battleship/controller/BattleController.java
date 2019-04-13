@@ -39,10 +39,10 @@ public class BattleController {
     public String getAllItems() {
         System.out.println("get all");
         List<GameInstance> allItems = gameInstanceRepository.findAll();
-        HashMap<String, String> returnItem = new HashMap<>();
+        HashMap<String, String[]> returnItem = new HashMap<>();
         for (GameInstance theItem : allItems) {
-            if (theItem.getWonGames() > 0) {
-                returnItem.put(theItem.getUserName(), Integer.toString(theItem.getWonGames()));
+            if (theItem.getWonGames() > 0 || theItem.getLostGames() > 0) {
+                returnItem.put(theItem.getUserName(), new String[] {Integer.toString(theItem.getWonGames()), Integer.toString(theItem.getLostGames())});
             }
         }
         return gson.toJson(returnItem);
