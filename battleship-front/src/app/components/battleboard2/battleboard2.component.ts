@@ -82,10 +82,10 @@ export class Battleboard2Component implements OnInit {
     }
 
     submitInitForm() {
-        this.userName = this.initForm.get('name').value.trim();
+        this.userName = this.initForm.get('name').value.trim().toLowerCase();
         if (this.userName) {
             this.initDone = true;
-            this.initializeBoard(this.userName.toLowerCase(), this.socketUrl);
+            this.initializeBoard(this.userName, this.socketUrl);
         } else {
             this.showErrorMessage = true;
         }

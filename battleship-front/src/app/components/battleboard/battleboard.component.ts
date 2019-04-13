@@ -87,10 +87,10 @@ export class BattleboardComponent implements OnInit {
     // $('#overlay').toggleClass('dBlock');
 
     submitInitForm() {
-        this.userName = this.initForm.get('name').value.trim();
+        this.userName = this.initForm.get('name').value.trim().toLowerCase();
         if (this.userName) {
             this.initDone = true;
-            this.initializeBoard(this.userName.toLowerCase(), () => {
+            this.initializeBoard(this.userName, () => {
                     this.connect();
                 });
         } else {
