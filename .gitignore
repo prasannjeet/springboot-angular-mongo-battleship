@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 Layout.txt
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
@@ -50,56 +49,3 @@ Thumbs.db
 #GIT
 .git/*
 .gitignore
-=======
-Layout.txt
-# See http://help.github.com/ignore-files/ for more about ignoring files.
-
-# compiled output
-battleship-front/dist
-battleship-front/tmp
-battleship-front/out-tsc
-# Only exists if Bazel was run
-battleship-front/bazel-out
-
-# dependencies
-battleship-front/node_modules
-
-# profiling files
-chrome-profiler-events.json
-speed-measure-plugin.json
-
-# IDEs and editors
-battleship-front/.idea
-.project
-.classpath
-.c9/
-*.launch
-.settings/
-*.sublime-workspace
-
-# IDE - VSCode
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
-.history/*
-
-# misc
-battleship-front/.sass-cache
-battleship-front/connect.lock
-battleship-front/coverage
-battleship-front/libpeerconnection.log
-npm-debug.log
-yarn-error.log
-testem.log
-battleship-front/typings
-
-# System Files
-.DS_Store
-Thumbs.db
-
-#GIT
-.git/*
-.gitignore
->>>>>>> 3af2178429b9b3c76f554af278cc5a04964d8c68
