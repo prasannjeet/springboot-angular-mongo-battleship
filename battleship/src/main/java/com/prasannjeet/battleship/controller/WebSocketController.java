@@ -112,15 +112,28 @@ public class WebSocketController {
             tempHashMap.put("winningMove", String.valueOf(winningMove));
             gameInstanceRepository.save(gameInstance);
 
+            String wonPlayerId, lostPlayerId;
             if (gameInstance.getAttackedShips() >= 15){
                 if (isPlayerOne) {
-                    playerId = playerMatchesRepository.findOneByWebSocketAddress(socketId).getPlayer1();
+                    wonPlayerId = playerMatchesRepository.findOneByWebSocketAddress(socketId).getPlayer1();
+                    lostPlayerId = playerMatchesRepository.findOneByWebSocketAddress(socketId).getPlayer2();
                 } else  {
-                    playerId = playerMatchesRepository.findOneByWebSocketAddress(socketId).getPlayer2();
+                    wonPlayerId = playerMatchesRepository.findOneByWebSocketAddress(socketId).getPlayer1();
+                    lostPlayerId = playerMatchesRepository.findOneByWebSocketAddress(socketId).getPlayer2();
                 }
-                gameInstance = gameInstanceRepository.findOneByUserId(playerId);
-                gameInstance.setWonGames(gameInstance.getWonGames() + 1);
-                gameInstanceRepository.save(gameInstance);
+
+                GameInstance wonGameInstance = gameInstanceRepository.findOneByUserId(wonPlayerId);
+                GameInstance lostGameInstance = gameInstanceRepository.findOneByUserId(lostPlayerId);
+
+                wonGameInstance.setWonGames(wonGameInstance.getWonGames() + 1);
+                lostGameInstance.setLostGames(lostGameInstance.getLostGames() +1);
+
+                gameInstanceRepository.save(wonGameInstance);
+                gameInstanceRepository.save(lostGameInstance);
+
+//                gameInstance = gameInstanceRepository.findOneByUserId(playerId);
+//                gameInstance.setWonGames(gameInstance.getWonGames() + 1);
+//                gameInstanceRepository.save(gameInstance);
             }
 
 //            if (winningMove) {
