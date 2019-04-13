@@ -6,7 +6,7 @@
             <th></th>
             <th>Player Name</th>
             <th></th>
-            <th></th>
+            <th>Lost Count</th>
             <th width="230">Win Count</th>
         </tr>
         <!--<div ">-->
@@ -14,7 +14,7 @@
                 <td class="circleIt" [style.background]="getRandomColor()" style="text-align: center; vertical-align: middle !important;" >{{item.toString().charAt(0).toUpperCase()}}</td>
                 <td>{{capitalize(item.toString())}}</td>
                 <td> -------- </td>
-                <td> -------- </td>
+                <td>{{lostCounts[i]}}</td>
                 <td>{{winCounts[i]}}</td>
             </tr>
         <!--</div>-->
