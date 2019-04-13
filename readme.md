@@ -4,7 +4,7 @@ Note: This app has been updated after the submission. An earlier snapshot of the
 
 #### <img src="https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/cloud.svg" width="35" height="35"/> The application is deployed in Heroku and can be viewed [here](https://battlefield-spring.herokuapp.com/#/battleboard).
 
-A web-based battleship game that uses Spring in the backend and Angular in the front. MongoDB was used for persisting the data. The project follows Model-View-Control Design Pattern. Technologies used at a glance:
+A web-based **multiplayer** battleship game that uses Spring in the backend and Angular in the front. MongoDB was used for persisting the data. Players communicate with each other using Websockets. The project follows Model-View-Control Design Pattern. Technologies used at a glance:
 
 - Spring Boot 2.1.4
 - Angular 7.2.12
@@ -43,6 +43,17 @@ This will start the angular server. The game can be played at http://localhost:4
 
 ## Time Taken
 Total time taken to build the game was 14-15 hours.
+
+# Game Workflow
+Following are the sequence of events in the perspective of an end user that take place in one instance of a game:
+1. The user lands on the first page where they enter their username and submits.
+2. User can then see two boards on his screen. The left one represents their own board with randomly placed ships, and the right one represents enemy's (Player - 2) empty board, as they cannot se the enemy's ship positions.
+3. User can then see a *link* at the bottom of the screen that they can share over the internet with their friend who can play against them.
+4. The link can then be opend by Player - 2 in their own browser. The entry screen with be similar to what Player 1 sees: A form where user can enter their username, followed by the screen where two boards are present, as discussed above, point 2. Further, Player 2 can also see the username of Player 1 at the bottom of the screen against whom they are playing.
+5. As soon as Player 2 enters their username, it will then be visible to Player 1 at the bottom of their screen, mentioning that they have joined the game.
+6. Player 2 get the chance to play first. They are allowed to attack at any of the 64 blocks in the *right* side of the screen. Any block attacked will then be also visible in the *left* side of the screen screen for Player 1, marked in *red*. However, if a player is successful in attacking a block where ship is present, a *fire* icon can be seen instead of *red* color, and this will be reflected to both the players.
+7. The first player to successfully attack all the ships at all positions wins the game.
+8. The link to the Score Table can be seen at the bottom of the screen for both the players.
 
 # About
 ## Spring Boot Backend
@@ -100,6 +111,7 @@ Further, the application has one service, `BattleService` that handles all the R
 - The enemy attacks on a player's board are also marked. 
 - If the enemy attacks correctly on a ship, a "fire" symbol appears in that positions.
 - A scorecard, as mentioned above, is also implemented.
+- Users can also see an error message if, for any reason, the websockets connection is lost with the server.
 
 ## Limitations
 One or many of these limitations could have been resolved with more time in hand.
@@ -111,8 +123,9 @@ One or many of these limitations could have been resolved with more time in hand
 - No tests have been implemented yet.
 - There is no AI opponent currently.
 - The design of the application can be improved.
-- If the browser is closed, there is no way to go back to the game.
+- If the browser is closed, or the user gets disconnected from the server, there is no way to go back to the game.
 - If the second player loggs in with the same username as the first player, the game might not function correctly. At the moment, there is no validation built for this.
+- Welcome message, instructions to play the game are not yet available.
 
 ## Improvements
 - The two components for playing a game can be clubbed into one, as most of the functionalities, and design are identical.
