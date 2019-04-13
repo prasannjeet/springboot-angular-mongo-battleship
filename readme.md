@@ -2,7 +2,7 @@ Note: This app has been updated after the submission. An earlier snapshot of the
 
 # Battleship
 
-#### The application is deployed in Heroku and can be viewed [here](https://battlefield-spring.herokuapp.com/#/battleboard).
+#### ![Deployed](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/cloud.svg) The application is deployed in Heroku and can be viewed [here](https://battlefield-spring.herokuapp.com/#/battleboard).
 
 A web-based battleship game that uses Spring in the backend and Angular in the front. MongoDB was used for persisting the data. The project follows Model-View-Control Design Pattern. Technologies used at a glance:
 
