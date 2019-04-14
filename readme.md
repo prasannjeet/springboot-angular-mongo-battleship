@@ -83,11 +83,10 @@ Further, the `Repository` package contains repositories for the models persisted
 ### The Class Diagram
 
 ![BattleShip-Server Class Diagram](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/class.svg)
+The yellow nodes represent packages and blue nodes represent classes.
 
 ### MongoDB Relationship Diagram
 ![MongoDB Diagram](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/database.png)
-
-The yellow nodes represent packages and blue nodes represent classes.
 
 ---
 ## Angular Front-End
@@ -124,7 +123,6 @@ Both are the same design and almost same functions. They are the main web-app fo
 - A scorecard, as mentioned above, is also implemented.
 - Users can also see an error message if, for any reason, the websockets connection is lost with the server.
 
----
 ## Limitations
 One or many of these limitations could have been resolved with more time in hand.
 
@@ -139,11 +137,9 @@ One or many of these limitations could have been resolved with more time in hand
 - If the second player loggs in with the same username as the first player, the game might not function correctly. At the moment, there is no validation built for this.
 - Welcome message, instructions to play the game are not yet available.
 
----
 ## Improvements
 - The two components for playing a game can be clubbed into one, as most of the functionalities, and design are identical.
 
----
 ## Design Inspirations
 - The battleship board design was inspired from the chessboard design discussed [here](https://stackoverflow.com/questions/39008253/draw-chessboard-with-frame-with-pure-html-and-css) by `caco` and `pol`. This was later extensively modified, and was also adapted fro Angular.
 - The idea for two-columned game layout was taken from [here](https://codepen.io/lukemeyrick/pen/gppveo), made by `Luke Meyrick`.
