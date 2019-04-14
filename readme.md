@@ -48,7 +48,7 @@ This will start the angular server. The game can be played at http://localhost:4
 ## Time Taken
 Total time taken to build the game was 14-15 hours.
 
-# Game Workflow
+## Game Workflow
 Following are the sequence of events in the perspective of an end user that take place in one instance of a game:
 1. The user lands on the first page where they enter their username and submits.
 2. User can then see two boards on his screen. The left one represents their own board with randomly placed ships, and the right one represents enemy's (Player - 2) empty board, as they cannot se the enemy's ship positions.
@@ -59,7 +59,7 @@ Following are the sequence of events in the perspective of an end user that take
 7. The first player to successfully attack all the ships at all positions wins the game.
 8. The link to the Score Table can be seen at the bottom of the screen for both the players.
 
-# About
+---
 ## Spring Boot Backend
 The project follows MVC Design Pattern. The `model` package contains all the models. Cookies or Sessions are not used. The server persists the game data in it's database, and remembers the players via the websocket messages.
 The models that are persisted in the Mongo Database are:
@@ -80,17 +80,25 @@ The controller is responsible for communicating with the angular application at 
 
 Further, the `Repository` package contains repositories for the models persisted in MongoDB that were discussed above. The `config` class contains other configurations for websocket. The other class `Security Config` will contain security configurations, which have not been implemented fully yet. The `application.properties` file in the `resources` folder contains other configurations, such as MongoDB location, etc. The `logics` package contains program logic. Although a lot of processing happens in the `GameInstance` model itself, the `logics` package is responsible for converting the `GameInstance` into a more consise format that can be easily read when sent to the clients.
 
-## The Class Diagram
+### The Class Diagram
 
 ![BattleShip-Server Class Diagram](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/class.svg)
 
-## MongoDB Relationship Diagram
-![MongoDB Diagram](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/diagram.png)
+### MongoDB Relationship Diagram
+![MongoDB Diagram](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/database.png)
 
 The yellow nodes represent packages and blue nodes represent classes.
 
+---
 ## Angular Front-End
-The front-end was built in angular as it makes it easier and organized for bigger applications. Although Battleship is a small game, dividing various parts into components will make it easy to upgrade in future. There two components in this applicaton:
+
+### Overview
+![Overview](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/overview.png)
+
+### Routes
+![Routes](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/routes.svg)
+
+The front-end was built in angular as it makes it easier and organized for bigger applications. Although Battleship is a small game, dividing various parts into components will make it easy to upgrade in future. There three components in this applicaton:
 
 1. BattleBoard, and
 2. BattleBoard2
@@ -99,26 +107,16 @@ The front-end was built in angular as it makes it easier and organized for bigge
 
 Both are the same design and almost same functions. They are the main web-app for player1, and player2. The game always works in pairs; when the first component is instantiated, it contains a link, which when clicked, instantiates the second component.
 
-The application is built with a minimal design where the left part contains the player's board with her ship positions that were initialized randomly. Further, the right half contains an empty board through which the other player can be attacked by clicking a particular cell.
+### GUI and Services
+- The application is built with a minimal design where the left part contains the player's board with her ship positions that were initialized randomly. Further, the right half contains an empty board through which the other player can be attacked by clicking a particular cell. ![Game-View](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/gameView.png)
 
-![Game-View](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/gameView.png)
+- The applications initially requests a username, which is then used as a unique-id. If a user uses the same name in another instance, their win-count will be updated in the repository. ![Welcome-Page](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/welcomePage.png)
 
-The applications initially requests a username, which is then used as a unique-id. If a user uses the same name in another instance, their win-count will be updated in the repository.
+- The third component displays the scorecard. It contains three columns displaying the user-name, the number of times they have lost the game and won the game. For a user to have their name in the score-card, they should have, at least once completed the game fully. ![Score-Table](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/scoreTable.png)
 
-![Welcome-Page](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/welcomePage.png)
+- Additionally, the application has one service, `BattleService` that handles all the REST api calls. Websocket communications are handled by component themselves. The application uses `Routing` to toggle between different components in the application using pseudo URL's generated.
 
-The third component displays the scorecard. It contains three columns displaying the user-name, the number of times they have lost the game and won the game. For a user to have their name in the score-card, they should have, at least once completed the game fully.
-
-![Score-Table](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/scoreTable.png)
-
-Further, the application has one service, `BattleService` that handles all the REST api calls. Websocket communications are handled by component themselves. The application uses `Routing` to toggle between different components in the application using pseudo URL's generated.
-
-## Overview
-![Overview](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/overview.png)
-
-## Routes
-![Routes](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/routes.svg)
-
+---
 ## Features
 - Apart from the enemy's board, users can also see their own board and the ship positions. 
 - The enemy attacks on a player's board are also marked. 
@@ -126,6 +124,7 @@ Further, the application has one service, `BattleService` that handles all the R
 - A scorecard, as mentioned above, is also implemented.
 - Users can also see an error message if, for any reason, the websockets connection is lost with the server.
 
+---
 ## Limitations
 One or many of these limitations could have been resolved with more time in hand.
 
@@ -140,9 +139,11 @@ One or many of these limitations could have been resolved with more time in hand
 - If the second player loggs in with the same username as the first player, the game might not function correctly. At the moment, there is no validation built for this.
 - Welcome message, instructions to play the game are not yet available.
 
+---
 ## Improvements
 - The two components for playing a game can be clubbed into one, as most of the functionalities, and design are identical.
 
+---
 ## Design Inspirations
 - The battleship board design was inspired from the chessboard design discussed [here](https://stackoverflow.com/questions/39008253/draw-chessboard-with-frame-with-pure-html-and-css) by `caco` and `pol`. This was later extensively modified, and was also adapted fro Angular.
 - The idea for two-columned game layout was taken from [here](https://codepen.io/lukemeyrick/pen/gppveo), made by `Luke Meyrick`.
