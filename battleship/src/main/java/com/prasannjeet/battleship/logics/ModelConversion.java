@@ -9,7 +9,18 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 
+/**
+ * @author Prasannjeet <strong>Description: </strong>
+ * The class that converts <i>GameInstance</i> model to the <i>GameModel</i> POJO Class.
+ */
 public class ModelConversion {
+
+    /**
+     * Converts <i>GameInstance</i> model to the <i>GameModel</i> POJO Class.
+     * @param gameModel The game model class.
+     * @param gameInstance The game instance class.
+     * @return The process game model class.
+     */
     public static GameModel convertGameInstance(GameModel gameModel, GameInstance gameInstance) {
         int positiveAttacks = 0;
         for (int i = 0; i<8; i++)

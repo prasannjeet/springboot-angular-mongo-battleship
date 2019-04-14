@@ -1,0 +1,2399 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>battleship-front documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+        <link rel="stylesheet" href="../styles/vagrant.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">battleship-front documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>BattleboardComponent</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/components/battleboard/battleboard.component.ts</code>
+</p>
+
+    <p class="comment">
+        <h3>Description</h3>
+    </p>
+    <p class="comment">
+        <p>BattleBoard component that instantiates when first player opens the URL.</p>
+
+    </p>
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                    <code><a href="https://angular.io/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-battleboard</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>./battleboard.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./battleboard.component.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#boardLength">boardLength</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#boardStatus">boardStatus</a>
+                            </li>
+                            <li>
+                                <a href="#clickedCells">clickedCells</a>
+                            </li>
+                            <li>
+                                <a href="#currentMessage">currentMessage</a>
+                            </li>
+                            <li>
+                                <a href="#gameover">gameover</a>
+                            </li>
+                            <li>
+                                <a href="#initDone">initDone</a>
+                            </li>
+                            <li>
+                                <a href="#initForm">initForm</a>
+                            </li>
+                            <li>
+                                <a href="#newBoardData">newBoardData</a>
+                            </li>
+                            <li>
+                                <a href="#opponentUserId">opponentUserId</a>
+                            </li>
+                            <li>
+                                <a href="#opponentUserName">opponentUserName</a>
+                            </li>
+                            <li>
+                                <a href="#ourTurn">ourTurn</a>
+                            </li>
+                            <li>
+                                <a href="#playGameUrl">playGameUrl</a>
+                            </li>
+                            <li>
+                                <a href="#shipCellCoordinates">shipCellCoordinates</a>
+                            </li>
+                            <li>
+                                <a href="#showErrorMessage">showErrorMessage</a>
+                            </li>
+                            <li>
+                                <a href="#socketUrl">socketUrl</a>
+                            </li>
+                            <li>
+                                <a href="#userId">userId</a>
+                            </li>
+                            <li>
+                                <a href="#userName">userName</a>
+                            </li>
+                            <li>
+                                <a href="#ws">ws</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#connect">connect</a>
+                            </li>
+                            <li>
+                                <a href="#disconnect">disconnect</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Static</span>
+                                <a href="#highlightCells">highlightCells</a>
+                            </li>
+                            <li>
+                                <a href="#initializeBoard">initializeBoard</a>
+                            </li>
+                            <li>
+                                <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                            <li>
+                                <a href="#onClick">onClick</a>
+                            </li>
+                            <li>
+                                <a href="#overlayOff">overlayOff</a>
+                            </li>
+                            <li>
+                                <a href="#overlayOn">overlayOn</a>
+                            </li>
+                            <li>
+                                <a href="#sendName">sendName</a>
+                            </li>
+                            <li>
+                                <a href="#submitInitForm">submitInitForm</a>
+                            </li>
+                            <li>
+                                <a href="#submitInitFormOriginal">submitInitFormOriginal</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(battleService: <a href="../injectables/BattleService.html">BattleService</a>, route: <a href="https://angular.io/api/router/ActivatedRoute" target="_blank">ActivatedRoute</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="21" class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:21</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div class="io-description"><p>Constructor for this component.</p>
+</div>
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                                    <td>Description</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>battleService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/BattleService.html" target="_self" >BattleService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>An instance of BattleService service for API calls.</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                                <tr>
+                                                        <td>route</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="https://angular.io/api/router/ActivatedRoute" target="_blank" >ActivatedRoute</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                        <td>
+                                                                <code><p>Instance of ActivatedRoute for getting route ID&#39;s</p>
+</code>
+                                                        </td>
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="connect"></a>
+                    <span class="name">
+                        <b>
+                            connect
+                        </b>
+                        <a href="#connect"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>connect()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="308"
+                            class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:308</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Attempts to connect through web sockets with the server as soon as the initial form with the username is submitted. Further, it also
+subscribes to the server through the channel containing the socket-id. The server sends a &quot;start&quot; message the first time. From the
+next steps, it sends the details of the opponent player turn. This is used to color the battle board with appropriate colors. If
+the game is over, the server also sends that info here. Refer to the processMessageFromClient() api in WebSocketController in the
+server. A sample response can be of the type:</p>
+</div>
+
+                    <div>
+                        <b>Example :</b>
+                        <div>
+                            <pre class="line-numbers"><code class="language-html">{
+&amp;quot;attackedAt&amp;quot;: &amp;quot;27&amp;quot;,
+&amp;quot;isContainsShip&amp;quot;: &amp;quot;false&amp;quot;,
+&amp;quot;winningMove&amp;quot;: &amp;quot;false&amp;quot;,
+&amp;quot;turnBy&amp;quot;: &amp;quot;p2&amp;quot;
+}</code></pre>
+                        </div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="disconnect"></a>
+                    <span class="name">
+                        <b>
+                            disconnect
+                        </b>
+                        <a href="#disconnect"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>disconnect()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="375"
+                            class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:375</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Used to disconnect the web sockets from the server. Never used.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="highlightCells"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Static</span>
+                            highlightCells
+                        </b>
+                        <a href="#highlightCells"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>highlightCells(values, className)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="139"
+                            class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:139</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Used to highlight a particular cell in the player&#39;s board.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>values</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Contains an array of the #id of the cell that needs to be highlighted.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>className</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Contains the class name that should be assignmed to the id.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="initializeBoard"></a>
+                    <span class="name">
+                        <b>
+                            initializeBoard
+                        </b>
+                        <a href="#initializeBoard"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>initializeBoard(username, callback1)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="255"
+                            class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:255</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>This method is called after the init form is submitted by the user. It initializes the board. It first sends an RESTful API call
+to the server to Initialize the board. It then receives the GameModel POJO class from the server that it uses to populate the
+user&#39;s board with ship positions and different colors for different ships. Also saves the user id of current user. A sample new
+board data is of the following type:</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>username</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>The username of the player.</p>
+
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>callback1</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>A callback function that is called after all the process of this method is finished.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                        <b>Example :</b>
+                        <div>
+                            <pre class="line-numbers"><code class="language-html">{
+&amp;quot;userId&amp;quot;: &amp;quot;00980f1a-2db6-4689-9eeb-140500d473d3&amp;quot;,
+&amp;quot;userName&amp;quot;: &amp;quot;monika&amp;quot;,
+&amp;quot;attackedByEnemyCoordinates&amp;quot;: [],
+&amp;quot;attackedCoordinates&amp;quot;: {},
+&amp;quot;shipPositions&amp;quot;: {
+&amp;quot;CARRIER&amp;quot;: [
+12,
+22,
+32,
+42,
+52
+],
+&amp;quot;SUBMARINE&amp;quot;: [
+4,
+14,
+24
+],
+&amp;quot;ATTACKER&amp;quot;: [
+1
+],
+&amp;quot;CRUISER&amp;quot;: [
+74,
+75,
+76,
+77
+],
+&amp;quot;DESTROYER&amp;quot;: [
+20,
+30
+]
+},
+&amp;quot;won&amp;quot;: false
+}</code></pre>
+                        </div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ngOnInit"></a>
+                    <span class="name">
+                        <b>
+                            ngOnInit
+                        </b>
+                        <a href="#ngOnInit"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>ngOnInit()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="153"
+                            class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:153</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Executes when this component is initialized.</p>
+<ol>
+     <li>Variables are set to empty/false depending upon the type.</li>
+     <li>The username form is initialized.</li>
+</ol></div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onClick"></a>
+                    <span class="name">
+                        <b>
+                            onClick
+                        </b>
+                        <a href="#onClick"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>onClick(event)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="195"
+                            class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:195</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Executes when an enemy cell in the battle board is click by a player. If clicked on a legal cell, the method changes the color of
+that cell to red, as well as sends the message to server via web sockets so that other player can change the color as well.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>event</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Click event is passed to this method from the DOM.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="overlayOff"></a>
+                    <span class="name">
+                        <b>
+                            overlayOff
+                        </b>
+                        <a href="#overlayOff"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>overlayOff()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="405"
+                            class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:405</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Called to remove the overlay that appears when overlayOn() is called.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="overlayOn"></a>
+                    <span class="name">
+                        <b>
+                            overlayOn
+                        </b>
+                        <a href="#overlayOn"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>overlayOn()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="397"
+                            class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:397</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Called when web sockets connection is broken. Adds an overlay in the screen with error message.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="sendName"></a>
+                    <span class="name">
+                        <b>
+                            sendName
+                        </b>
+                        <a href="#sendName"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>sendName(value)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="386"
+                            class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:386</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Used to send information to the server, whether the player has made his turn, or the player has initialized their board.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>value</td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>Can be the coordinate of the cell that the player clicked, or can just be an indicator that the player is ready to play.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="submitInitForm"></a>
+                    <span class="name">
+                        <b>
+                            submitInitForm
+                        </b>
+                        <a href="#submitInitForm"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>submitInitForm()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="178"
+                            class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:178</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Runs when the initial form with username is submitted. The username variable is updated. If pressed enter without entering any
+username, an error message is displayed. Also makes sure that only spaces have not been sent as a username.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="submitInitFormOriginal"></a>
+                    <span class="name">
+                        <b>
+                            submitInitFormOriginal
+                        </b>
+                        <a href="#submitInitFormOriginal"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>submitInitFormOriginal()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="170"
+                            class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:170</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Called to submit the init form. Was initially made for call-backs. However, now it is redundant.
+calls submitInitForm() method.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="boardLength"></a>
+                        <span class="name">
+                            <b>
+                            boardLength</b>
+                            <a href="#boardLength"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="64" class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:64</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The board length of the game, which is a constant number 8 in this game.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="boardStatus"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            boardStatus</b>
+                            <a href="#boardStatus"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>{
+        userId: {},
+        userName: {},
+        attackedByEnemyCoordinates: [],
+        attackedCoordinates: {},
+        shipPositions: {
+            CARRIER: [],
+            SUBMARINE: [],
+            CRUISER: [],
+            ATTACKER: [],
+            DESTROYER: []
+        },
+        won: {}
+    }</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="119" class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:119</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Variable for receiving GameModel POJO class. However, this is unused at the moment.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="clickedCells"></a>
+                        <span class="name">
+                            <b>
+                            clickedCells</b>
+                            <a href="#clickedCells"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[&#x27;&#x27;]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="74" class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:74</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Array containing all the cell positions attacked by the player.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="currentMessage"></a>
+                        <span class="name">
+                            <b>
+                            currentMessage</b>
+                            <a href="#currentMessage"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="79" class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:79</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Contains the current message to be displayed in the screen. Like &quot;It&#39;s your turn&quot;, &quot;It&#39;s enemy&#39;s turn&quot;, etc.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="gameover"></a>
+                        <span class="name">
+                            <b>
+                            gameover</b>
+                            <a href="#gameover"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>false</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="109" class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:109</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Intimates whether the game is over or not. True of any of the player wins. Intimation received from the server.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="initDone"></a>
+                        <span class="name">
+                            <b>
+                            initDone</b>
+                            <a href="#initDone"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="34" class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:34</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Defines if the component has been initialized or not. When the user enters their username and submits.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="initForm"></a>
+                        <span class="name">
+                            <b>
+                            initForm</b>
+                            <a href="#initForm"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://angular.io/api/forms/FormGroup" target="_blank" >FormGroup</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="44" class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:44</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Instance of form group for filling up the username text box.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="newBoardData"></a>
+                        <span class="name">
+                            <b>
+                            newBoardData</b>
+                            <a href="#newBoardData"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="69" class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:69</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Will contain the data of new board. Received from the GameModel POJO class in spring.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="opponentUserId"></a>
+                        <span class="name">
+                            <b>
+                            opponentUserId</b>
+                            <a href="#opponentUserId"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="89" class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:89</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The user-id of the opponent.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="opponentUserName"></a>
+                        <span class="name">
+                            <b>
+                            opponentUserName</b>
+                            <a href="#opponentUserName"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="94" class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:94</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The user name of the opponent.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ourTurn"></a>
+                        <span class="name">
+                            <b>
+                            ourTurn</b>
+                            <a href="#ourTurn"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="104" class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:104</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>True if it&#39;s the player&#39;s turn. Toggles between true and false with each click.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="playGameUrl"></a>
+                        <span class="name">
+                            <b>
+                            playGameUrl</b>
+                            <a href="#playGameUrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="114" class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:114</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Contains the url that will be used to initialize the second player.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="shipCellCoordinates"></a>
+                        <span class="name">
+                            <b>
+                            shipCellCoordinates</b>
+                            <a href="#shipCellCoordinates"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="99" class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:99</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Contains the list of all the coordinates containing a ship. Used to highlight ship coordinates.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="showErrorMessage"></a>
+                        <span class="name">
+                            <b>
+                            showErrorMessage</b>
+                            <a href="#showErrorMessage"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/boolean" target="_blank" >boolean</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:39</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>When true, the error message is shown in the screen.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="socketUrl"></a>
+                        <span class="name">
+                            <b>
+                            socketUrl</b>
+                            <a href="#socketUrl"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="59" class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:59</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>The socket id, which is the primary key of PlayerMatches model in the server. Used to communicate via websockets with the server.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="userId"></a>
+                        <span class="name">
+                            <b>
+                            userId</b>
+                            <a href="#userId"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="54" class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:54</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>User id of the player.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="userName"></a>
+                        <span class="name">
+                            <b>
+                            userName</b>
+                            <a href="#userName"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="49" class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:49</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>User name of the player.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="ws"></a>
+                        <span class="name">
+                            <b>
+                            ws</b>
+                            <a href="#ws"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="84" class="link-to-prism">src/app/components/battleboard/battleboard.component.ts:84</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <div class="io-description"><p>Stomp instance for web sockets.</p>
+</div>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import {Component, OnInit} from &#x27;@angular/core&#x27;;
+import {FormControl, FormGroup, Validators} from &#x27;@angular/forms&#x27;;
+import {BattleService} from &#x27;../../services/battle.service&#x27;;
+import {ActivatedRoute} from &#x27;@angular/router&#x27;;
+import * as Stomp from &#x27;stompjs&#x27;;
+
+import * as $ from &#x27;jquery&#x27;;
+
+/**
+ * BattleBoard component that instantiates when first player opens the URL.
+ */
+@Component({
+    selector: &#x27;app-battleboard&#x27;,
+    templateUrl: &#x27;./battleboard.component.html&#x27;,
+    styleUrls: [&#x27;./battleboard.component.scss&#x27;]
+})
+
+/**
+ * BattleBoard component that instantiates when first player opens the URL.
+ */
+export class BattleboardComponent implements OnInit {
+
+    /**
+     * Constructor for this component.
+     * @param battleService An instance of BattleService service for API calls.
+     * @param route Instance of ActivatedRoute for getting route ID&#x27;s
+     */
+    constructor(private battleService: BattleService, private route: ActivatedRoute) {
+    }
+
+    /**
+     * Defines if the component has been initialized or not. When the user enters their username and submits.
+     */
+    initDone: boolean;
+
+    /**
+     * When true, the error message is shown in the screen.
+     */
+    showErrorMessage: boolean;
+
+    /**
+     * Instance of form group for filling up the username text box.
+     */
+    initForm: FormGroup;
+
+    /**
+     * User name of the player.
+     */
+    userName: string;
+
+    /**
+     * User id of the player.
+     */
+    userId: string;
+
+    /**
+     * The socket id, which is the primary key of PlayerMatches model in the server. Used to communicate via websockets with the server.
+     */
+    socketUrl: string;
+
+    /**
+     * The board length of the game, which is a constant number 8 in this game.
+     */
+    boardLength;
+
+    /**
+     * Will contain the data of new board. Received from the GameModel POJO class in spring.
+     */
+    newBoardData;
+
+    /**
+     * Array containing all the cell positions attacked by the player.
+     */
+    clickedCells &#x3D; [&#x27;&#x27;];
+
+    /**
+     * Contains the current message to be displayed in the screen. Like &quot;It&#x27;s your turn&quot;, &quot;It&#x27;s enemy&#x27;s turn&quot;, etc.
+     */
+    currentMessage;
+
+    /**
+     * Stomp instance for web sockets.
+     */
+    ws;
+
+    /**
+     * The user-id of the opponent.
+     */
+    opponentUserId;
+
+    /**
+     * The user name of the opponent.
+     */
+    opponentUserName;
+
+    /**
+     * Contains the list of all the coordinates containing a ship. Used to highlight ship coordinates.
+     */
+    shipCellCoordinates &#x3D; [];
+
+    /**
+     * True if it&#x27;s the player&#x27;s turn. Toggles between true and false with each click.
+     */
+    ourTurn;
+
+    /**
+     * Intimates whether the game is over or not. True of any of the player wins. Intimation received from the server.
+     */
+    gameover &#x3D; false;
+
+    /**
+     * Contains the url that will be used to initialize the second player.
+     */
+    playGameUrl;
+
+    /**
+    * Variable for receiving GameModel POJO class. However, this is unused at the moment.
+    */
+    private boardStatus &#x3D; {
+        userId: {},
+        userName: {},
+        attackedByEnemyCoordinates: [],
+        attackedCoordinates: {},
+        shipPositions: {
+            CARRIER: [],
+            SUBMARINE: [],
+            CRUISER: [],
+            ATTACKER: [],
+            DESTROYER: []
+        },
+        won: {}
+    };
+
+    /**
+     * Used to highlight a particular cell in the player&#x27;s board.
+     * @param values Contains an array of the #id of the cell that needs to be highlighted.
+     * @param className Contains the class name that should be assignmed to the id.
+     */
+    static highlightCells(values, className) {
+        for (const item of values) {
+            const elId2 &#x3D; &#x27;#&#x27; + item.toString();
+            $(elId2).addClass(className);
+        }
+    }
+
+    /**
+     * Executes when this component is initialized.
+     * &lt;ol&gt;
+     *     &lt;li&gt;Variables are set to empty/false depending upon the type.&lt;/li&gt;
+     *     &lt;li&gt;The username form is initialized.&lt;/li&gt;
+     * &lt;/ol&gt;
+     */
+    ngOnInit() {
+        this.userName &#x3D; &#x27;&#x27;;
+        this.initDone &#x3D; false;
+        this.showErrorMessage &#x3D; false;
+        this.initForm &#x3D; new FormGroup({
+            name: new FormControl(&#x27;&#x27;, Validators.required)
+        });
+        /**
+         * Initializing the array with values: {0,1,2,3,4,5,6,7}
+         */
+        this.boardLength &#x3D; Array.from({length: 8}, (v, k) &#x3D;&gt; k);
+    }
+
+    /**
+     * Called to submit the init form. Was initially made for call-backs. However, now it is redundant.
+     * calls submitInitForm() method.
+     */
+    submitInitFormOriginal() {
+        this.submitInitForm();
+    }
+
+    /**
+     * Runs when the initial form with username is submitted. The username variable is updated. If pressed enter without entering any
+     * username, an error message is displayed. Also makes sure that only spaces have not been sent as a username.
+     */
+    submitInitForm() {
+        this.userName &#x3D; this.initForm.get(&#x27;name&#x27;).value.trim().toLowerCase();
+        if (this.userName) {
+            this.initDone &#x3D; true;
+            this.initializeBoard(this.userName, () &#x3D;&gt; {
+                    this.connect();
+                });
+        } else {
+            this.showErrorMessage &#x3D; true;
+        }
+     }
+
+    /**
+     * Executes when an enemy cell in the battle board is click by a player. If clicked on a legal cell, the method changes the color of
+     * that cell to red, as well as sends the message to server via web sockets so that other player can change the color as well.
+     * @param event Click event is passed to this method from the DOM.
+     */
+    onClick(event) {
+        const value &#x3D; (event.target || event.srcElement || event.currentTarget).attributes.id.nodeValue;
+        if (this.ourTurn) {
+            if (!this.clickedCells.includes(value)) {
+                this.ourTurn &#x3D; false;
+                this.currentMessage &#x3D; &#x27;&#x27;;
+                this.clickedCells.push(value);
+                BattleboardComponent.highlightCells([value], &#x27;attacked&#x27;);
+                this.sendName(&#x27;po&#x27; + value);
+            } else {
+                this.currentMessage &#x3D; &#x27;You have already attacked there!&#x27;;
+            }
+        }
+    }
+
+    /**
+     * This method is called after the init form is submitted by the user. It initializes the board. It first sends an RESTful API call
+     * to the server to Initialize the board. It then receives the GameModel POJO class from the server that it uses to populate the
+     * user&#x27;s board with ship positions and different colors for different ships. Also saves the user id of current user. A sample new
+     * board data is of the following type:
+     *
+     * @example
+     * {
+     *   &quot;userId&quot;: &quot;00980f1a-2db6-4689-9eeb-140500d473d3&quot;,
+     *   &quot;userName&quot;: &quot;monika&quot;,
+     *   &quot;attackedByEnemyCoordinates&quot;: [],
+     *   &quot;attackedCoordinates&quot;: {},
+     *   &quot;shipPositions&quot;: {
+     *     &quot;CARRIER&quot;: [
+     *       12,
+     *       22,
+     *       32,
+     *       42,
+     *       52
+     *     ],
+     *     &quot;SUBMARINE&quot;: [
+     *       4,
+     *       14,
+     *       24
+     *     ],
+     *     &quot;ATTACKER&quot;: [
+     *       1
+     *     ],
+     *     &quot;CRUISER&quot;: [
+     *       74,
+     *       75,
+     *       76,
+     *       77
+     *     ],
+     *     &quot;DESTROYER&quot;: [
+     *       20,
+     *       30
+     *     ]
+     *   },
+     *   &quot;won&quot;: false
+     * }
+     *
+     * @param username The username of the player.
+     * @param callback1 A callback function that is called after all the process of this method is finished.
+     */
+    initializeBoard(username, callback1) {
+        this.battleService.getNewBoard(username).subscribe(
+            data &#x3D;&gt; {
+                this.newBoardData &#x3D; data;
+            },
+            err &#x3D;&gt; {
+                console.log(err);
+            },
+            () &#x3D;&gt; {
+                for (const i of this.newBoardData.shipPositions.CARRIER) {
+                    this.shipCellCoordinates.push((i &lt; 10) ? (&#x27;my0&#x27; + i.toString()) : (&#x27;my&#x27; + i.toString()));
+                    BattleboardComponent.highlightCells([this.shipCellCoordinates[this.shipCellCoordinates.length - 1]], &#x27;ship1&#x27;);
+                }
+                for (const i of this.newBoardData.shipPositions.SUBMARINE) {
+                    this.shipCellCoordinates.push((i &lt; 10) ? (&#x27;my0&#x27; + i.toString()) : (&#x27;my&#x27; + i.toString()));
+                    BattleboardComponent.highlightCells([this.shipCellCoordinates[this.shipCellCoordinates.length - 1]], &#x27;ship2&#x27;);
+                }
+                for (const i of this.newBoardData.shipPositions.CRUISER) {
+                    this.shipCellCoordinates.push((i &lt; 10) ? (&#x27;my0&#x27; + i.toString()) : (&#x27;my&#x27; + i.toString()));
+                    BattleboardComponent.highlightCells([this.shipCellCoordinates[this.shipCellCoordinates.length - 1]], &#x27;ship3&#x27;);
+                }
+                for (const i of this.newBoardData.shipPositions.ATTACKER) {
+                    this.shipCellCoordinates.push((i &lt; 10) ? (&#x27;my0&#x27; + i.toString()) : (&#x27;my&#x27; + i.toString()));
+                    BattleboardComponent.highlightCells([this.shipCellCoordinates[this.shipCellCoordinates.length - 1]], &#x27;ship4&#x27;);
+                }
+                for (const i of this.newBoardData.shipPositions.DESTROYER) {
+                    this.shipCellCoordinates.push((i &lt; 10) ? (&#x27;my0&#x27; + i.toString()) : (&#x27;my&#x27; + i.toString()));
+                    BattleboardComponent.highlightCells([this.shipCellCoordinates[this.shipCellCoordinates.length - 1]], &#x27;ship5&#x27;);
+                }
+                // BattleboardComponent.highlightCells(this.shipCellCoordinates, &#x27;shipCell&#x27;);
+                console.log(JSON.stringify(this.newBoardData));
+                this.userId &#x3D; this.newBoardData.userId;
+                this.socketUrl &#x3D; this.newBoardData.socketUrl;
+                this.playGameUrl &#x3D; &#x27;/playWithFriend/&#x27; + this.userId + &#x27;/&#x27; + this.socketUrl;
+                callback1();
+            });
+    }
+
+    /**
+     * Attempts to connect through web sockets with the server as soon as the initial form with the username is submitted. Further, it also
+     * subscribes to the server through the channel containing the socket-id. The server sends a &quot;start&quot; message the first time. From the
+     * next steps, it sends the details of the opponent player turn. This is used to color the battle board with appropriate colors. If
+     * the game is over, the server also sends that info here. Refer to the processMessageFromClient() api in WebSocketController in the
+     * server. A sample response can be of the type:
+     *
+     * @example
+     * {
+     *   &quot;attackedAt&quot;: &quot;27&quot;,
+     *   &quot;isContainsShip&quot;: &quot;false&quot;,
+     *   &quot;winningMove&quot;: &quot;false&quot;,
+     *   &quot;turnBy&quot;: &quot;p2&quot;
+     * }
+     */
+    connect() {
+        const socket &#x3D; new WebSocket(&#x27;ws://localhost:8080/greeting&#x27;);
+        this.ws &#x3D; Stomp.over(socket);
+        const that &#x3D; this;
+        this.ws.connect({}, frame &#x3D;&gt; {
+            that.ws.subscribe(&#x27;/errors&#x27;, message &#x3D;&gt; {
+                alert(&#x27;Error &#x27; + message.body);
+            });
+            that.ws.subscribe(&#x27;/topic/reply/&#x27; + this.socketUrl, message &#x3D;&gt; {
+                let tempdata;
+                let tempUserNameObject;
+                if (message.body &#x3D;&#x3D;&#x3D; &#x27;start&#x27;) {
+                    setTimeout(() &#x3D;&gt; {
+                        this.battleService.getPlayer2Id(this.socketUrl).subscribe(
+                            data &#x3D;&gt; {
+                                tempdata &#x3D; data;
+                                this.opponentUserId &#x3D; tempdata.userId;
+                            }, error1 &#x3D;&gt; {
+                                console.error(error1);
+                            }, () &#x3D;&gt; {
+                                    this.battleService.getUserName(this.opponentUserId).subscribe(data &#x3D;&gt; {
+                                        tempUserNameObject &#x3D; data;
+                                    }, error &#x3D;&gt; {
+                                        console.error(error);
+                                    }, () &#x3D;&gt; {
+                                        this.opponentUserName &#x3D; tempUserNameObject.userName;
+                                    });
+                            });
+                        }, 1500);
+
+                } else {
+                    const stringInfo &#x3D; JSON.parse(message.body);
+                    if (stringInfo.turnBy &#x3D;&#x3D; &#x27;p1&#x27;) {
+                        if (stringInfo.isContainsShip &#x3D;&#x3D; &#x27;true&#x27;) {
+                            this.ourTurn &#x3D; false;
+                            BattleboardComponent.highlightCells([&#x27;their&#x27; + stringInfo.attackedAt], &#x27;attackedWithShip&#x27;);
+                        }
+                    }
+                    if (stringInfo.turnBy &#x3D;&#x3D; &#x27;p2&#x27;) {
+                        this.ourTurn &#x3D; true;
+                        if (stringInfo.isContainsShip &#x3D;&#x3D; &#x27;true&#x27;) {
+                            BattleboardComponent.highlightCells([&#x27;my&#x27; + stringInfo.attackedAt], &#x27;attackedWithShip&#x27;);
+                        } else {
+                            BattleboardComponent.highlightCells([&#x27;my&#x27; + stringInfo.attackedAt], &#x27;attacked&#x27;);
+                        }
+                    }
+                    if (stringInfo.winningMove &#x3D;&#x3D; &#x27;true&#x27;) {
+                        this.gameover &#x3D; (stringInfo.winningMove &#x3D;&#x3D; &#x27;true&#x27;);
+                        console.log(&#x27;Winning Move: &#x27; + stringInfo.winningMove);
+                        this.ourTurn &#x3D; false;
+                        if (stringInfo.turnBy &#x3D;&#x3D; &#x27;p1&#x27;) {
+                            this.currentMessage &#x3D; &#x27;Congratulations, You Won! Refresh to play again.&#x27;;
+                        } else {
+                            this.currentMessage &#x3D; &#x27;Bad Luck! &#x27; + this.opponentUserName + &#x27; won! Refresh to play again.&#x27;;
+                        }
+
+                    }
+                }
+            });
+        }, error &#x3D;&gt; {
+            this.overlayOn();
+        });
+    }
+
+    /**
+     * Used to disconnect the web sockets from the server. Never used.
+     */
+    disconnect() {
+        if (this.ws !&#x3D; null) {
+            this.ws.ws.close();
+        }
+        console.log(&#x27;Disconnected&#x27;);
+    }
+
+    /**
+     * Used to send information to the server, whether the player has made his turn, or the player has initialized their board.
+     * @param value Can be the coordinate of the cell that the player clicked, or can just be an indicator that the player is ready to play.
+     */
+    sendName(value) {
+        const data &#x3D; JSON.stringify({
+            name: value
+        });
+        this.ws.send(&#x27;/app/message/&#x27; + this.socketUrl, {}, data);
+        console.log(&#x27;SEND-SEND &#x27; + value);
+    }
+
+    /**
+     * Called when web sockets connection is broken. Adds an overlay in the screen with error message.
+     */
+    overlayOn() {
+        document.getElementById(&#x27;overlay&#x27;).style.display &#x3D; &#x27;block&#x27;;
+        // const idName &#x3D; &#x27;#overlayText&#x27;;
+    }
+
+    /**
+     * Called to remove the overlay that appears when overlayOn() is called.
+     */
+    overlayOff() {
+        document.getElementById(&#x27;overlay&#x27;).style.display &#x3D; &#x27;none&#x27;;
+    }
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;!--&lt;h3 *ngIf&#x3D;&quot;userName&quot;&gt;Welcome {{userName}}&lt;/h3&gt;--&gt;
+&lt;!--&lt;div *ngIf&#x3D;&quot;initDone&#x3D;&#x3D;false&quot; class&#x3D;&quot;initValues&quot;&gt;--&gt;
+    &lt;!--&lt;p *ngIf&#x3D;&quot;showErrorMessage&#x3D;&#x3D;true&quot;&gt;Entering Name is Mandatory&lt;/p&gt;--&gt;
+    &lt;!--&lt;form [formGroup]&#x3D;&quot;initForm&quot; (ngSubmit)&#x3D;&quot;submitInitForm()&quot; novalidate&gt;--&gt;
+        &lt;!--&lt;label&gt;Enter Your Name:--&gt;
+            &lt;!--&lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;name&quot; required autofocus/&gt;--&gt;
+        &lt;!--&lt;/label&gt;--&gt;
+        &lt;!--&lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;--&gt;
+    &lt;!--&lt;/form&gt;--&gt;
+
+&lt;!--&lt;/div&gt;--&gt;
+&lt;!--&lt;div *ngIf&#x3D;&quot;initDone&#x3D;&#x3D;true&quot; class&#x3D;theBoard&gt;--&gt;
+    &lt;!--&lt;span *ngIf&#x3D;&quot;selectShipMessage&quot;&gt;{{selectShipMessage}}&lt;/span&gt;--&gt;
+    &lt;!--&lt;table class&#x3D;&quot;battleshipBoard&quot;&gt;--&gt;
+        &lt;!--&lt;tr *ngFor&#x3D;&quot;let r of boardLength&quot; class&#x3D;&quot;battleshipBoard&quot;&gt;--&gt;
+            &lt;!--&lt;td *ngFor&#x3D;&quot;let c of boardLength&quot; class&#x3D;&quot;battleshipBoard battleCell&quot;--&gt;
+                &lt;!--[attr.id]&#x3D;&quot;r.toString()+c.toString()&quot;&gt;&lt;/td&gt;--&gt;
+        &lt;!--&lt;/tr&gt;--&gt;
+    &lt;!--&lt;/table&gt;--&gt;
+&lt;!--&lt;/div&gt;--&gt;
+
+&lt;!--&lt;table&gt;--&gt;
+    &lt;!--&lt;tr&gt;--&gt;
+        &lt;!--&lt;td id&#x3D;&quot;4&quot; (click)&#x3D;&quot;addClass($event)&quot;&gt;1&lt;/td&gt;--&gt;
+        &lt;!--&lt;td&gt;2&lt;/td&gt;--&gt;
+    &lt;!--&lt;/tr&gt;--&gt;
+    &lt;!--&lt;tr&gt;--&gt;
+        &lt;!--&lt;td id&#x3D;&quot;5&quot;&gt;3&lt;/td&gt;--&gt;
+        &lt;!--&lt;td&gt;4&lt;/td&gt;--&gt;
+    &lt;!--&lt;/tr&gt;--&gt;
+&lt;!--&lt;/table&gt;--&gt;
+
+
+&lt;!--&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;&#x3D;--&gt;
+&lt;div id&#x3D;&quot;overlay&quot; class&#x3D;&quot;dNone&quot;&gt;
+    &lt;div id&#x3D;&quot;overlayText&quot;&gt;Oops! You have been disconnected from the server. Click to connect again.&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class&#x3D;&quot;nav&quot;&gt;
+    &lt;h3 class&#x3D;&quot;keepInCenter&quot; *ngIf&#x3D;&quot;userName&quot;&gt;Welcome {{userName}}&lt;/h3&gt;
+    &lt;h2 class&#x3D;&quot;keepInCenter&quot;&gt;{{currentMessage}}&lt;/h2&gt;
+    &lt;h2 *ngIf&#x3D;&quot;ourTurn &amp;&amp; gameover &#x3D;&#x3D; false&quot; class&#x3D;&quot;keepInCenter&quot;&gt;Your Turn!&lt;/h2&gt;
+    &lt;h2 *ngIf&#x3D;&quot;opponentUserName &amp;&amp; !ourTurn &amp;&amp; gameover &#x3D;&#x3D; false&quot; class&#x3D;&quot;keepInCenter&quot;&gt;Waiting for {{opponentUserName}}&lt;/h2&gt;
+&lt;/div&gt;
+
+&lt;div class&#x3D;&quot;body&quot;&gt;
+
+    &lt;div class&#x3D;&quot;leftContent&quot;&gt;
+        &lt;div class&#x3D;&#x27;leftCCon&#x27;&gt;
+            &lt;div *ngIf&#x3D;&quot;initDone&#x3D;&#x3D;true&quot; class&#x3D;theBoard&gt;
+                &lt;span&gt;Board with your ship positions. Enemy attacks will be shown in red. Enemy attacks at ship positions
+                will be shown with a fire icon.&lt;/span&gt;
+                &lt;table class&#x3D;&quot;battleshipBoard&quot;&gt;
+                    &lt;tr *ngFor&#x3D;&quot;let r of boardLength&quot; class&#x3D;&quot;battleshipBoard&quot;&gt;
+                        &lt;td *ngFor&#x3D;&quot;let c of boardLength&quot; class&#x3D;&quot;battleshipBoard battleCell&quot;
+                            [attr.id]&#x3D;&quot;&#x27;my&#x27;+r.toString()+c.toString()&quot;&gt;&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;rightContent&quot;&gt;
+        &lt;div class&#x3D;&#x27;leftCCon&#x27;&gt;
+            &lt;div *ngIf&#x3D;&quot;initDone&#x3D;&#x3D;false&quot; class&#x3D;&quot;initValues&quot;&gt;
+                &lt;p *ngIf&#x3D;&quot;showErrorMessage&#x3D;&#x3D;true&quot;&gt;Entering Name is Mandatory&lt;/p&gt;
+                &lt;form [formGroup]&#x3D;&quot;initForm&quot; (ngSubmit)&#x3D;&quot;submitInitFormOriginal()&quot; novalidate&gt;
+                    &lt;label&gt;Enter Your Name:
+                        &lt;input type&#x3D;&quot;text&quot; class&#x3D;&quot;form-control&quot; formControlName&#x3D;&quot;name&quot; required autofocus/&gt;
+                    &lt;/label&gt;
+                    &lt;button type&#x3D;&quot;submit&quot; class&#x3D;&quot;btn btn-primary&quot;&gt;Submit&lt;/button&gt;
+                &lt;/form&gt;
+            &lt;/div&gt;
+            &lt;div *ngIf&#x3D;&quot;initDone&#x3D;&#x3D;true&quot; class&#x3D;theBoard&gt;
+                &lt;span *ngIf&#x3D;&quot;selectShipMessage&quot;&gt;{{selectShipMessage}}&lt;/span&gt;
+                &lt;table class&#x3D;&quot;battleshipBoard&quot;&gt;
+                    &lt;tr *ngFor&#x3D;&quot;let r of boardLength&quot; class&#x3D;&quot;battleshipBoard&quot;&gt;
+                        &lt;td *ngFor&#x3D;&quot;let c of boardLength&quot; class&#x3D;&quot;battleshipBoard battleCell&quot; (click)&#x3D;&quot;onClick($event)&quot;
+                            [attr.id]&#x3D;&quot;&#x27;their&#x27;+r.toString()+c.toString()&quot;&gt;&lt;/td&gt;
+                    &lt;/tr&gt;
+                &lt;/table&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class&#x3D;&quot;navBottom footerText&quot;&gt;
+        &lt;h4 *ngIf&#x3D;&quot;opponentUserName&quot; style&#x3D;&quot;text-align:center;&quot;&gt;{{opponentUserName}} Has Joined The Game!&lt;/h4&gt;
+        &lt;h4 *ngIf&#x3D;&quot;playGameUrl &amp;&amp; !opponentUserName&quot; style&#x3D;&quot;text-align:center;&quot;&gt;Ask your friend to join by clicking on &lt;a [href]&#x3D;&quot;playGameUrl&quot; target&#x3D;&quot;_blank&quot;&gt;THIS LINK.&lt;/a&gt;&lt;/h4&gt;
+        &lt;h4 style&#x3D;&quot;text-align: center&quot;&gt;View the scorecard &lt;a href&#x3D;&quot;http://localhost:4200/scoreTable&quot; target&#x3D;&quot;_blank&quot;&gt;here!&lt;/a&gt;&lt;/h4&gt;
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>./battleboard.component.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">table.battleshipBoard {
+    margin: auto;
+    background: lightgrey;
+    border: 5px solid #333;
+    border-collapse: collapse; /* */
+}
+
+.ship1 {
+    background: #73683B;
+}
+
+.ship2 {
+    background: #583E23;
+}
+
+.ship3 {
+    background: #13262F;
+}
+
+.ship4 {
+    background: #FFD847;
+}
+
+.ship5 {
+    background: #634FFF;
+}
+
+.attacked {
+    background: indianred;
+}
+
+.keepInCenter{
+    width: auto !important;
+    height: 100px !important;
+    margin: auto auto !important;
+    color: antiquewhite;
+}
+
+//footer
+
+.keepInCenter-bottom{
+    width: auto !important;
+    height: 40px !important;
+    margin: auto auto !important;
+    color: antiquewhite;
+}
+
+.footerText {
+    color: aliceblue;
+}
+
+td.battleshipBoard {
+    width: 50px; height: 50px;
+    border: 2px solid #333; /* */
+}
+td.battleCell {
+    border: 4px solid #333;
+}
+.test {
+    background: blue;
+}
+
+$accent1: #192441;
+$accent2: #ff4c11;
+$accent3: #f7f7f7;
+
+a {
+    link-appearance: none;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: lato;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.nav {
+    height: 130px;
+    clear: both;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #192441; /* Old browsers */
+    background: -moz-linear-gradient(45deg, #192441 0%, #252d60 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#192441), color-stop(100%,#252d60)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(45deg, #192441 0%,#252d60 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(45deg, #192441 0%,#252d60 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(45deg, #192441 0%,#252d60 100%); /* IE10+ */
+    background: linear-gradient(45deg, #192441 0%,#252d60 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr&#x3D;&#x27;#192441&#x27;, endColorstr&#x3D;&#x27;#252d60&#x27;,GradientType&#x3D;1 ); /* IE6-8 fallback on horizontal gradient */
+}
+
+.navBottom {
+    height: 85px;
+    clear: both;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #192441; /* Old browsers */
+    background: -moz-linear-gradient(45deg, #192441 0%, #252d60 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#192441), color-stop(100%,#252d60)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(45deg, #192441 0%,#252d60 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(45deg, #192441 0%,#252d60 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(45deg, #192441 0%,#252d60 100%); /* IE10+ */
+    background: linear-gradient(45deg, #192441 0%,#252d60 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr&#x3D;&#x27;#192441&#x27;, endColorstr&#x3D;&#x27;#252d60&#x27;,GradientType&#x3D;1 ); /* IE6-8 fallback on horizontal gradient */
+}
+
+//.bborder {
+//    border-bottom: 3px solid $accent2;
+//    margin-top: 10px;
+//    width: 40px;
+//}
+
+
+// Split Screen Content
+
+.body {
+    padding-top: 50px;
+    clear: both;
+}
+
+.leftContent {
+    // height: 100vh;
+    width: 50%;
+    position: fixed;
+    float:left;
+}
+
+.leftCCon {
+    padding: 100px 50px;
+
+    h1 {
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 1.7em;
+        color: rgba($accent1, 0.7);
+    }
+
+    p {
+        font-size: 0.7em;
+        text-transform: none;
+        letter-spacing: 0;
+        font-weight: 600;
+        color: rgba($accent1, 0.5);
+    }
+}
+
+.rightContent {
+    height: 100%;
+    float: right;
+    background-color: grey;
+    width: 50%;
+    // padding: 120px 0;
+}
+
+
+//tr.chessboard:nth-child(odd) td.chessboard:nth-child(even),
+//tr.chessboard:nth-child(even) td.chessboard:nth-child(odd) {
+//    background: white;
+//}
+
+//Overlay Styles
+#overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 2;
+    cursor: pointer;
+}
+
+.dNone {
+    display: none;
+}
+
+.dBlock {
+    display: block;
+}
+
+#overlayText{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+}
+
+.attackedWithShip {
+    background-image: url(../../../assets/images/danger.png) !important;
+    background-size:100% 100%;
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><!--<h3 *ngIf="userName">Welcome {{userName}}</h3>--><!--<div *ngIf="initDone==false" class="initValues">-->    <!--<p *ngIf="showErrorMessage==true">Entering Name is Mandatory</p>-->    <!--<form [formGroup]="initForm" (ngSubmit)="submitInitForm()" novalidate>-->        <!--<label>Enter Your Name:-->            <!--<input type="text" class="form-control" formControlName="name" required autofocus/>-->        <!--</label>-->        <!--<button type="submit" class="btn btn-primary">Submit</button>-->    <!--</form>--><!--</div>--><!--<div *ngIf="initDone==true" class=theBoard>-->    <!--<span *ngIf="selectShipMessage">{{selectShipMessage}}</span>-->    <!--<table class="battleshipBoard">-->        <!--<tr *ngFor="let r of boardLength" class="battleshipBoard">-->            <!--<td *ngFor="let c of boardLength" class="battleshipBoard battleCell"-->                <!--[attr.id]="r.toString()+c.toString()"></td>-->        <!--</tr>-->    <!--</table>--><!--</div>--><!--<table>-->    <!--<tr>-->        <!--<td id="4" (click)="addClass($event)">1</td>-->        <!--<td>2</td>-->    <!--</tr>-->    <!--<tr>-->        <!--<td id="5">3</td>-->        <!--<td>4</td>-->    <!--</tr>--><!--</table>--><!--====================--><div id="overlay" class="dNone">    <div id="overlayText">Oops! You have been disconnected from the server. Click to connect again.</div></div><div class="nav">    <h3 class="keepInCenter" *ngIf="userName">Welcome {{userName}}</h3>    <h2 class="keepInCenter">{{currentMessage}}</h2>    <h2 *ngIf="ourTurn && gameover == false" class="keepInCenter">Your Turn!</h2>    <h2 *ngIf="opponentUserName && !ourTurn && gameover == false" class="keepInCenter">Waiting for {{opponentUserName}}</h2></div><div class="body">    <div class="leftContent">        <div class=\'leftCCon\'>            <div *ngIf="initDone==true" class=theBoard>                <span>Board with your ship positions. Enemy attacks will be shown in red. Enemy attacks at ship positions                will be shown with a fire icon.</span>                <table class="battleshipBoard">                    <tr *ngFor="let r of boardLength" class="battleshipBoard">                        <td *ngFor="let c of boardLength" class="battleshipBoard battleCell"                            [attr.id]="\'my\'+r.toString()+c.toString()"></td>                    </tr>                </table>            </div>        </div>    </div>    <div class="rightContent">        <div class=\'leftCCon\'>            <div *ngIf="initDone==false" class="initValues">                <p *ngIf="showErrorMessage==true">Entering Name is Mandatory</p>                <form [formGroup]="initForm" (ngSubmit)="submitInitFormOriginal()" novalidate>                    <label>Enter Your Name:                        <input type="text" class="form-control" formControlName="name" required autofocus/>                    </label>                    <button type="submit" class="btn btn-primary">Submit</button>                </form>            </div>            <div *ngIf="initDone==true" class=theBoard>                <span *ngIf="selectShipMessage">{{selectShipMessage}}</span>                <table class="battleshipBoard">                    <tr *ngFor="let r of boardLength" class="battleshipBoard">                        <td *ngFor="let c of boardLength" class="battleshipBoard battleCell" (click)="onClick($event)"                            [attr.id]="\'their\'+r.toString()+c.toString()"></td>                    </tr>                </table>            </div>        </div>    </div>    <div class="navBottom footerText">        <h4 *ngIf="opponentUserName" style="text-align:center;">{{opponentUserName}} Has Joined The Game!</h4>        <h4 *ngIf="playGameUrl && !opponentUserName" style="text-align:center;">Ask your friend to join by clicking on <a [href]="playGameUrl" target="_blank">THIS LINK.</a></h4>        <h4 style="text-align: center">View the scorecard <a href="http://localhost:4200/scoreTable" target="_blank">here!</a></h4>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'Battleboard2Component', 'selector': 'app-battleboard2'},{'name': 'BattleboardComponent', 'selector': 'app-battleboard'},{'name': 'ScoreTableComponent', 'selector': 'app-score-table'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'BattleboardComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'BattleboardComponent.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>

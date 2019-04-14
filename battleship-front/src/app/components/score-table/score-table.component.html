@@ -1,32 +1,20 @@
 <div class="table-users">
     <div class="header">Users</div>
-
     <table cellspacing="0">
         <tr>
             <th></th>
             <th>Player Name</th>
-            <th></th>
+            <th>Games Completed</th>
             <th>Lost Count</th>
             <th width="230">Win Count</th>
         </tr>
-        <!--<div ">-->
             <tr *ngFor="let item of names; index as i">
-                <td class="circleIt" [style.background]="getRandomColor()" style="text-align: center; vertical-align: middle !important;" >{{item.toString().charAt(0).toUpperCase()}}</td>
+                <td class="circleIt" [style.background]="randomColors[i]" style="text-align: center; vertical-align: middle !important;" >{{item.toString().charAt(0).toUpperCase()}}</td>
                 <td>{{capitalize(item.toString())}}</td>
-                <td> -------- </td>
+                <td> {{+lostCounts[i] + +winCounts[i]}} </td>
                 <td>{{lostCounts[i]}}</td>
                 <td>{{winCounts[i]}}</td>
             </tr>
-        <!--</div>-->
     </table>
 </div>
 <p style="text-align: center">click <a href="http://localhost:4200/battleboard">here</a> to start a new game.</p>
-
-<!--<p data-letters="HH"></p>-->
-<!--<p class = "circleIt" [ngStyle]="{background: randomColors[1]}">SS</p>-->
-<!--<p class = "circleIt" [ngStyle]="{background: randomColors[2]}">SS</p>-->
-<!--<p class = "circleIt" [ngStyle]="{background: randomColors[3]}">SS</p>-->
-<!--[ngStyle]="{'background-color':person.country === 'UK' ? 'green' : 'red' }"></<div>-->
-    <!--[ngStyle]="{'background': getRandomColor()}-->
-
-<!--style="color:blue;font-size:46px;"-->

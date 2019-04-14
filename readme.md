@@ -15,6 +15,9 @@ A web-based **multiplayer** battleship game that uses Spring in the backend and 
 - Spring dependencies can be checked [here](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/battleship/pom.xml).
 - Angular dependencies can be checked [here](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/battleship-front/package.json).
 
+# Documentation
+- :newspaper: The documentation for the Spring Back-End can be seen [here](https://battlefield-spring.herokuapp.com/doc/backend/index.html).
+
 ## Play the game
 To play the game, open your broser at http://localhost:4200/battleboard after compiling the game.
 

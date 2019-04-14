@@ -21,14 +21,33 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * @author Prasannjeet <strong>Description: </strong>
+ * Class that primarily deals with WebSocket controllers.
+ */
 @Controller
 @RestController
 public class WebSocketController {
 
-    private final SimpMessageSendingOperations messagingTemplate;
+    /**
+     * Used Gson to parse JSON Objects
+     */
     private final Gson gson;
+
+    /**
+     * Repository instance of GameInstance Model
+     */
     private final GameInstanceRepository gameInstanceRepository;
+    
+    /**
+     * Repository instance of PlayerMatches Model
+     */
     private final PlayerMatchesRepository playerMatchesRepository;
+    
+    /**
+     * Used to send error message to client.
+     */
+    private final SimpMessageSendingOperations messagingTemplate;
 
     @Autowired
     public WebSocketController(SimpMessageSendingOperations messagingTemplate,
@@ -41,12 +60,25 @@ public class WebSocketController {
         this.playerMatchesRepository = playerMatchesRepository;
     }
 
+    /**
+     * This API endpoint initializes player 2. It is called when the URL generated after Player 1
+     * is initialized is called by Player 2 in another browser. <em>Note that this endpoint
+     * should be present in the <strong>BattleController</strong> controller class. This will be
+     * updated in future updates.</em>
+     * @param username The username of Player 2 after the player enters it in the welcome form.
+     * @param socketUrl The Socket-ID or unique ID from PlayerMatches model.
+     * @return The GameModel POJO class containing all the details about Player 2, including the 
+     * ship positions.
+     */
     @RequestMapping(value ="/playWithFriend/{username}/{socketUrl}")
     @SneakyThrows(Exception.class)
     public GameModel initPlayer2 (@PathVariable String username, @PathVariable String socketUrl) {
         GameInstance gameInstance;
         GameModel gameModel = new GameModel(UUID.randomUUID().toString(), username);
 
+        /** If the user already exists in the repository, it will be used. Otherwise a new
+         * instance of the model GameInstance, and in turn GameModel will be generated and sent.
+         */
         if (gameInstanceRepository.existsByUserName(username)){
             gameInstance = gameInstanceRepository.findOneByUserName(username);
             gameInstance = new GameInstance(gameModel.getUserId(), gameInstance.getUserName(), gameInstance.getWonGames(), gameInstance.getLostGames());
@@ -64,13 +96,27 @@ public class WebSocketController {
         return gameModel;
     }
 
-//    @MessageMapping("/message")
-//    @SendTo("/topic/reply")
-//    public String processMessageFromClient(@Payload String message) throws Exception {
-//        String name = new Gson().fromJson(message, Map.class).get("name").toString();
-//        return name;
-//    }
-
+    /**
+     * This is the main endpoint that handles all the WebSocket connections. It receives the
+     * Socket-Id from the URL, and the message from WebSocket payload.
+     * <ul>
+     *     <li>If the message body contains <i>start,</i> it's an indication by Player 2 that it has initialized
+     *     it's board and is ready to play. At this stage, Player 1 requests the username of Player 2 from
+     *     another RESTful API endpoint.</li>
+     *     <li>If it does not contain the <i>start</i> message, it'll then contain the coordinate of the BattleBoard
+     *     where the player attacked. Whether it was player 1, or player 2 is identified by the html coordinate-id.
+     *     Once identified the other player is attacked and the based on the attack position, i.e. if it contains a
+     *     ship, or if it is a blank coordinate, or if this attack resulted in a win, etc., an appropriate response
+     *     is generated and sent to the client.</li>
+     * </ul>
+     * 
+     * @param message Message received from the client regarding the game proceedings.
+     * @param socketId The unique Id from the PlayerMatches model that is used as Socket-Id
+     * for WebSockets connection.
+     * @return Response to the incoming message. Varies and is based on the type of message
+     * received.
+     * @throws Exception In case there are any exceptions that are not yet handled.
+     */
     @SneakyThrows(NullPointerException.class)
     @MessageMapping("/message/{id}")
     @SendTo("/topic/reply/{id}")
@@ -79,31 +125,20 @@ public class WebSocketController {
         String textPart = "", numberPart = "";
         String playerId = "";
         boolean isPlayerOne = false;
-        // System.out.println("debug: "+socketId);
-        if (!(messageBody.equals("start") || messageBody.equals("won") || messageBody.equals("lost"))) {
-            // System.out.println("one");
+        if (!(messageBody.equals("start"))) {
             textPart = messageBody.replaceAll("\\d","");
             numberPart = messageBody.replace(textPart, "");
             HashMap<String, String> tempHashMap = new HashMap<>();
-//            System.out.println("main debug: "+textPart);
             if (textPart.equals("potheir")) {
-//                System.out.println("two");
-//                if (playerMatchesRepository.findOneByWebSocketAddress(socketId).getPlayer1() == null)
-//                    System.out.println("three");
                 playerId = playerMatchesRepository.findOneByWebSocketAddress(socketId).getPlayer2();
                 tempHashMap.put("turnBy", "p1");
                 isPlayerOne = true;
             }
             else if (textPart.equals("pttheir")) {
-//                if (playerMatchesRepository.findOneByWebSocketAddress(socketId).getPlayer2() == null)
-//                    System.out.println("four");
                 playerId = playerMatchesRepository.findOneByWebSocketAddress(socketId).getPlayer1();
-//                System.out.println("p2 "+playerId);
-//                System.out.println("p1 "+playerMatchesRepository.findOneByWebSocketAddress(socketId).getPlayer1());
                 tempHashMap.put("turnBy", "p2");
                 isPlayerOne = false;
             }
-//            if (gameInstanceRepository.findOneByUserId(playerId) == null) System.out.println("five");
             GameInstance gameInstance = gameInstanceRepository.findOneByUserId(playerId);
             boolean isContainsShip = gameInstance.enemyTurn(Integer.parseInt(numberPart));
             boolean winningMove = gameInstance.getAttackedShips() >= 15;
@@ -130,24 +165,19 @@ public class WebSocketController {
 
                 gameInstanceRepository.save(wonGameInstance);
                 gameInstanceRepository.save(lostGameInstance);
-
-//                gameInstance = gameInstanceRepository.findOneByUserId(playerId);
-//                gameInstance.setWonGames(gameInstance.getWonGames() + 1);
-//                gameInstanceRepository.save(gameInstance);
             }
 
-//            if (winningMove) {
-//                GameInstance gameInstance1 = gameInstanceRepository.findOneByUserId(playerMatchesRepository.findOneByWebSocketAddress(socketId).getPlayer1());
-//                GameInstance gameInstance2 = gameInstanceRepository.findOneByUserId(playerMatchesRepository.findOneByWebSocketAddress(socketId).getPlayer2());
-//
-//            }
 
             return gson.toJson(tempHashMap);
         }
-//        System.out.println("TEST1: "+textPart+" "+"TEST2 "+numberPart);
         return new Gson().fromJson(message, Map.class).get("name").toString();
     }
 
+    /**
+     * This endpoint sends an error message in case there is any error or exception.
+     * @param exception The Exception Message
+     * @return The error message
+     */
     @MessageExceptionHandler
     public String handleException(Throwable exception) {
         messagingTemplate.convertAndSend("/errors", exception.getMessage());

@@ -1,11 +1,21 @@
-import { browser, by, element } from 'protractor';
+import {browser, by, element} from 'protractor';
 
+/**
+ * @ignore
+ */
 export class AppPage {
-  navigateTo() {
-    return browser.get(browser.baseUrl) as Promise<any>;
-  }
 
-  getTitleText() {
-    return element(by.css('app-root h1')).getText() as Promise<string>;
-  }
+    /**
+     * @ignore
+     */
+    navigateTo() {
+        return browser.get(browser.baseUrl) as Promise<any>;
+    }
+
+    /**
+     * @ignore
+     */
+    getTitleText() {
+        return element(by.css('app-root h1')).getText() as Promise<string>;
+    }
 }

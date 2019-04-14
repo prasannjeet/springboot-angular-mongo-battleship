@@ -47,7 +47,8 @@
     <div class="leftContent">
         <div class='leftCCon'>
             <div *ngIf="initDone==true" class=theBoard>
-                <span *ngIf="selectShipMessage">{{selectShipMessage}}</span>
+                <span>Board with your ship positions. Enemy attacks will be shown in red. Enemy attacks at ship positions
+                will be shown with a fire icon.</span>
                 <table class="battleshipBoard">
                     <tr *ngFor="let r of boardLength" class="battleshipBoard">
                         <td *ngFor="let c of boardLength" class="battleshipBoard battleCell"

@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="overflow: hidden; " width="840pt" height="211pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:ev="http://www.w3.org/2001/xml-events"><g class="svg-pan-zoom_viewport" id="viewport-20190414170620917" style="transform: matrix(1.2869, 0, 0, 1.2869, -118, -204.768);" transform="matrix(1.2869, 0, 0, 1.2869, -118, -204.768)">
+<g class="graph" id="graph0" transform="scale(1) rotate(0) translate(4 207)">
+<title>dependencies</title>
+<polygon fill="#ffffff" stroke="transparent" points="-4,4 -4,-207 836,-207 836,4 -4,4" />
+<text font-family="sans-serif" font-size="14px" font-weight="bold" fill="#000000" text-anchor="start" x="395.0091" y="-42.4">Legend</text>
+<polygon fill="#ffffb3" stroke="transparent" points="182,-10 182,-30 202,-30 202,-10 182,-10" />
+<text font-family="sans-serif" font-size="14px" fill="#000000" text-anchor="start" x="205.629" y="-15.4">  Declarations</text>
+<polygon fill="#8dd3c7" stroke="transparent" points="295,-10 295,-30 315,-30 315,-10 295,-10" />
+<text font-family="sans-serif" font-size="14px" fill="#000000" text-anchor="start" x="318.7251" y="-15.4">  Module</text>
+<polygon fill="#80b1d3" stroke="transparent" points="381,-10 381,-30 401,-30 401,-10 381,-10" />
+<text font-family="sans-serif" font-size="14px" fill="#000000" text-anchor="start" x="404.7812" y="-15.4">  Bootstrap</text>
+<polygon fill="#fdb462" stroke="transparent" points="478,-10 478,-30 498,-30 498,-10 478,-10" />
+<text font-family="sans-serif" font-size="14px" fill="#000000" text-anchor="start" x="501.6732" y="-15.4">  Providers</text>
+<polygon fill="#fb8072" stroke="transparent" points="574,-10 574,-30 594,-30 594,-10 574,-10" />
+<text font-family="sans-serif" font-size="14px" fill="#000000" text-anchor="start" x="597.7259" y="-15.4">  Exports</text>
+<g class="cluster" id="clust1">
+<title>cluster_AppModule</title>
+<polygon fill="none" stroke="#000000" stroke-dasharray="1px, 5px" points="8,-70 8,-195 824,-195 824,-70 8,-70" />
+</g>
+<g class="cluster" id="clust2">
+<title>cluster_AppModule_declarations</title>
+<polygon fill="none" stroke="#000000" points="318,-78 318,-130 816,-130 816,-78 318,-78" />
+</g>
+<g class="cluster" id="clust6">
+<title>cluster_AppModule_imports</title>
+<polygon fill="none" stroke="#000000" points="166,-78 166,-130 310,-130 310,-78 166,-78" />
+</g>
+<g class="cluster" id="clust9">
+<title>cluster_AppModule_providers</title>
+<polygon fill="none" stroke="#000000" points="16,-78 16,-130 158,-130 158,-78 16,-78" />
+</g>
+<!-- Battleboard2Component -->
+<g class="node" id="node1">
+<title>Battleboard2Component</title>
+<polygon fill="#ffffb3" stroke="#000000" points="807.646,-122 654.354,-122 654.354,-86 807.646,-86 807.646,-122" />
+<text font-family="Times,serif" font-size="14px" fill="#000000" text-anchor="middle" x="731" y="-99.8">Battleboard2Component</text>
+</g>
+<!-- AppModule -->
+<g class="node" id="node4">
+<title>AppModule</title>
+<polygon fill="#8dd3c7" stroke="#000000" points="440.657,-187 437.657,-191 416.657,-191 413.657,-187 357.343,-187 357.343,-151 440.657,-151 440.657,-187" />
+<text font-family="Times,serif" font-size="14px" fill="#000000" text-anchor="middle" x="399" y="-164.8">AppModule</text>
+</g>
+<!-- Battleboard2Component&#45;&gt;AppModule -->
+<g class="edge" id="edge1">
+<title>Battleboard2Component-&gt;AppModule</title>
+<path fill="none" stroke="#000000" d="M 731 -122.284 C 731 -143.321 731 -175 731 -175 C 731 -175 450.712 -175 450.712 -175" />
+<polygon fill="#000000" stroke="#000000" points="450.712,-171.5 440.712,-175 450.712,-178.5 450.712,-171.5" />
+</g>
+<!-- BattleboardComponent -->
+<g class="node" id="node2">
+<title>BattleboardComponent</title>
+<polygon fill="#ffffb3" stroke="#000000" points="636.146,-122 489.854,-122 489.854,-86 636.146,-86 636.146,-122" />
+<text font-family="Times,serif" font-size="14px" fill="#000000" text-anchor="middle" x="563" y="-99.8">BattleboardComponent</text>
+</g>
+<!-- BattleboardComponent&#45;&gt;AppModule -->
+<g class="edge" id="edge2">
+<title>BattleboardComponent-&gt;AppModule</title>
+<path fill="none" stroke="#000000" d="M 563 -122.022 C 563 -139.373 563 -163 563 -163 C 563 -163 450.809 -163 450.809 -163" />
+<polygon fill="#000000" stroke="#000000" points="450.809,-159.5 440.809,-163 450.808,-166.5 450.809,-159.5" />
+</g>
+<!-- ScoreTableComponent -->
+<g class="node" id="node3">
+<title>ScoreTableComponent</title>
+<polygon fill="#ffffb3" stroke="#000000" points="471.577,-122 326.423,-122 326.423,-86 471.577,-86 471.577,-122" />
+<text font-family="Times,serif" font-size="14px" fill="#000000" text-anchor="middle" x="399" y="-99.8">ScoreTableComponent</text>
+</g>
+<!-- ScoreTableComponent&#45;&gt;AppModule -->
+<g class="edge" id="edge3">
+<title>ScoreTableComponent-&gt;AppModule</title>
+<path fill="none" stroke="#000000" d="M 399 -122.106 C 399 -122.106 399 -140.991 399 -140.991" />
+<polygon fill="#000000" stroke="#000000" points="395.5,-140.991 399,-150.991 402.5,-140.991 395.5,-140.991" />
+</g>
+<!-- AppRoutingModule -->
+<g class="node" id="node5">
+<title>AppRoutingModule</title>
+<polygon fill="#8dd3c7" stroke="#000000" points="302.274,-122 299.274,-126 278.274,-126 275.274,-122 173.726,-122 173.726,-86 302.274,-86 302.274,-122" />
+<text font-family="Times,serif" font-size="14px" fill="#000000" text-anchor="middle" x="238" y="-99.8">AppRoutingModule</text>
+</g>
+<!-- AppRoutingModule&#45;&gt;AppModule -->
+<g class="edge" id="edge4">
+<title>AppRoutingModule-&gt;AppModule</title>
+<path fill="none" stroke="#000000" d="M 238 -122.022 C 238 -139.373 238 -163 238 -163 C 238 -163 347.119 -163 347.119 -163" />
+<polygon fill="#000000" stroke="#000000" points="347.12,-166.5 357.119,-163 347.119,-159.5 347.12,-166.5" />
+</g>
+<!-- BattleService -->
+<g class="node" id="node6">
+<title>BattleService</title>
+<ellipse fill="#fdb462" stroke="#000000" cx="87" cy="-104" rx="63.1131" ry="18" />
+<text font-family="Times,serif" font-size="14px" fill="#000000" text-anchor="middle" x="87" y="-99.8">BattleService</text>
+</g>
+<!-- BattleService&#45;&gt;AppModule -->
+<g class="edge" id="edge5">
+<title>BattleService-&gt;AppModule</title>
+<path fill="none" stroke="#000000" d="M 87 -122.284 C 87 -143.321 87 -175 87 -175 C 87 -175 347.246 -175 347.246 -175" />
+<polygon fill="#000000" stroke="#000000" points="347.246,-178.5 357.246,-175 347.246,-171.5 347.246,-178.5" />
+</g>
+</g>
+</g></svg>

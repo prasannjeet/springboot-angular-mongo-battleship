@@ -1,0 +1,124 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>battleship-front documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+	      <link rel="stylesheet" href="./styles/style.css">
+        <link rel="stylesheet" href="./styles/vagrant.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="./" class="navbar-brand">battleship-front documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content getting-started">
+                   <div class="content-data">
+
+<h1 id="battleshipfront">BattleshipFront</h1>
+<p>This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a> version 7.3.8.</p>
+<h2 id="development-server">Development server</h2>
+<p>Run <code>ng serve</code> for a dev server. Navigate to <code>http://localhost:4200/</code>. The app will automatically reload if you change any of the source files.</p>
+<h2 id="angular-front-end">Angular Front-End</h2>
+<p>The front-end was built in angular as it makes it easier and organized for bigger applications. Although Battleship is a small game, dividing various parts into components will make it easy to upgrade in future. There two components in this applicaton:</p>
+<ol>
+<li>BattleBoard, and</li>
+<li>BattleBoard2</li>
+<li>ScoreTable</li>
+</ol>
+<p>Both are the same design and almost same functions. They are the main web-app for player1, and player2. The game always works in pairs; when the first component is instantiated, it contains a link, which when clicked, instantiates the second component.</p>
+<p>The application is built with a minimal design where the left part contains the player&#39;s board with her ship positions that were initialized randomly. Further, the right half contains an empty board through which the other player can be attacked by clicking a particular cell.</p>
+<p>The applications initially requests a username, which is then used as a unique-id. If a user uses the same name in another instance, their win-count will be updated in the repository.</p>
+<p>The third component displays the scorecard. It contains three columns displaying the user-name, the number of times they have lost the game and won the game. For a user to have their name in the score-card, they should have, at least once completed the game fully.</p>
+<p>Further, the application has one service, <code>BattleService</code> that handles all the REST api calls. Websocket communications are handled by component themselves. The application uses <code>Routing</code> to toggle between different components in the application using pseudo URL&#39;s generated.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Apart from the enemy&#39;s board, users can also see their own board and the ship positions. </li>
+<li>The enemy attacks on a player&#39;s board are also marked. </li>
+<li>If the enemy attacks correctly on a ship, a &quot;fire&quot; symbol appears in that positions.</li>
+<li>A scorecard, as mentioned above, is also implemented.</li>
+<li>Users can also see an error message if, for any reason, the websockets connection is lost with the server.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 0;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'getting-started';
+            var COMPODOC_CURRENT_PAGE_URL = 'index.html';
+       </script>
+
+       <script src="./js/libs/custom-elements.min.js"></script>
+       <script src="./js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="./js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="./js/menu-wc.js" defer></script>
+
+       <script src="./js/libs/bootstrap-native.js"></script>
+
+       <script src="./js/libs/es6-shim.min.js"></script>
+       <script src="./js/libs/EventDispatcher.js"></script>
+       <script src="./js/libs/promise.min.js"></script>
+       <script src="./js/libs/zepto.min.js"></script>
+
+       <script src="./js/compodoc.js"></script>
+
+       <script src="./js/tabs.js"></script>
+       <script src="./js/menu.js"></script>
+       <script src="./js/libs/clipboard.min.js"></script>
+       <script src="./js/libs/prism.js"></script>
+       <script src="./js/sourceCode.js"></script>
+          <script src="./js/search/search.js"></script>
+          <script src="./js/search/lunr.min.js"></script>
+          <script src="./js/search/search-lunr.js"></script>
+          <script src="./js/search/search_index.js"></script>
+       <script src="./js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
