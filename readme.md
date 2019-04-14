@@ -17,6 +17,7 @@ A web-based **multiplayer** battleship game that uses Spring in the backend and 
 
 # Documentation
 - :newspaper: The documentation for the Spring Back-End can be seen [here](https://battlefield-spring.herokuapp.com/doc/backend/index.html).
+- :newspaper: The documentation for the Angular Front-End can be seen [here](https://battlefield-spring.herokuapp.com/doc/frontend/index.html).
 
 ## Play the game
 To play the game, open your broser at http://localhost:4200/battleboard after compiling the game.
@@ -108,6 +109,12 @@ The third component displays the scorecard. It contains three columns displaying
 ![Score-Table](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/scoreTable.png)
 
 Further, the application has one service, `BattleService` that handles all the REST api calls. Websocket communications are handled by component themselves. The application uses `Routing` to toggle between different components in the application using pseudo URL's generated.
+
+## Overview
+![Overview](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/overview.png)
+
+## Routes
+![Routes](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/routes.svg)
 
 ## Features
 - Apart from the enemy's board, users can also see their own board and the ship positions. 
