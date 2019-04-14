@@ -15,7 +15,7 @@ A web-based **multiplayer** battleship game that uses Spring in the backend and 
 - Spring dependencies can be checked [here](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/battleship/pom.xml).
 - Angular dependencies can be checked [here](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/battleship-front/package.json).
 
-# Documentation
+## Documentation
 - :newspaper: The documentation for the Spring Back-End can be seen [here](https://battlefield-spring.herokuapp.com/doc/backend/index.html).
 - :newspaper: The documentation for the Angular Front-End can be seen [here](https://battlefield-spring.herokuapp.com/doc/frontend/index.html).
 
@@ -41,7 +41,7 @@ The Spring server should now be listening at http://localhost:8080
 This will start the angular server. The game can be played at http://localhost:4200/battleboard
 
 #### Prerequisits
-- Make sure `Angular`, `node`, `npm`, `mongoDB`, `maven` is installed.
+- Make sure `Angular`, `node`, `npm`, `maven` is installed.
 - As the angular project uses `yarn` as a package manager, make sure it is [installed](https://yarnpkg.com/lang/en/docs/install).
 
 
@@ -83,6 +83,9 @@ Further, the `Repository` package contains repositories for the models persisted
 ## The Class Diagram
 
 ![BattleShip-Server Class Diagram](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/class.svg)
+
+## MongoDB Relationship Diagram
+![MongoDB Diagram](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/diagram.png)
 
 The yellow nodes represent packages and blue nodes represent classes.
 

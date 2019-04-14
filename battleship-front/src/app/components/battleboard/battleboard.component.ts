@@ -214,40 +214,7 @@ export class BattleboardComponent implements OnInit {
      * board data is of the following type:
      *
      * @example
-     * {
-     *   "userId": "00980f1a-2db6-4689-9eeb-140500d473d3",
-     *   "userName": "monika",
-     *   "attackedByEnemyCoordinates": [],
-     *   "attackedCoordinates": {},
-     *   "shipPositions": {
-     *     "CARRIER": [
-     *       12,
-     *       22,
-     *       32,
-     *       42,
-     *       52
-     *     ],
-     *     "SUBMARINE": [
-     *       4,
-     *       14,
-     *       24
-     *     ],
-     *     "ATTACKER": [
-     *       1
-     *     ],
-     *     "CRUISER": [
-     *       74,
-     *       75,
-     *       76,
-     *       77
-     *     ],
-     *     "DESTROYER": [
-     *       20,
-     *       30
-     *     ]
-     *   },
-     *   "won": false
-     * }
+     * To check an example of the JSON object received, refer to the README tab above.
      *
      * @param username The username of the player.
      * @param callback1 A callback function that is called after all the process of this method is finished.
@@ -298,12 +265,7 @@ export class BattleboardComponent implements OnInit {
      * server. A sample response can be of the type:
      *
      * @example
-     * {
-     *   "attackedAt": "27",
-     *   "isContainsShip": "false",
-     *   "winningMove": "false",
-     *   "turnBy": "p2"
-     * }
+     * To check an example input JSON object, refer to the README tab above.
      */
     connect() {
         const socket = new WebSocket('ws://localhost:8080/greeting');
