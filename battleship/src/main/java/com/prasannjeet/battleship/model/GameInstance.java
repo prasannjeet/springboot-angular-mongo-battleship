@@ -120,12 +120,13 @@ public class GameInstance {
      */
     @SneakyThrows(NullPointerException.class)
     public void setRandomPositions(BattleBoard battleBoard, Ship ship) {
-        boolean isHorizontal = returnRandomBoolean();
+        boolean isHorizontal;
         BattleCell oneCell = null;
         Random random = new Random();
         int x = 0;
         int y = 0;
         do {
+            isHorizontal = returnRandomBoolean();
             if (isHorizontal) {
                 x = random.nextInt(8 - ship.getSize() + 1);
                 y = random.nextInt(8);
@@ -140,12 +141,32 @@ public class GameInstance {
                 ship.getCoordinates()[i] = (x + i) * 10 + y;
                 oneCell = battleBoard.getBattleCells()[x + i][y];
                 oneCell.setContainsShip(true);
+                for (int j = 0; j<3; j++) {
+                    for (int k = 0; k<3; k++) {
+                        try {
+                            BattleCell theCell = battleBoard.getBattleCells()[x+i-1+j][y-1+k];
+                            theCell.setGreyArea(true);
+                        } catch (Exception e) {
+                            //
+                        }
+                    }
+                }
             }
         else
             for (int i = 0; i < ship.getSize(); i++) {
                 ship.getCoordinates()[i] = x * 10 + (y + i);
                 oneCell = battleBoard.getBattleCells()[x][y + i];
                 oneCell.setContainsShip(true);
+                for (int j = 0; j<3; j++) {
+                    for (int k = 0; k<3; k++) {
+                        try {
+                            BattleCell theCell = battleBoard.getBattleCells()[x-1+j][y+i-1+k];
+                            theCell.setGreyArea(true);
+                        } catch (Exception e) {
+                            //
+                        }
+                    }
+                }
             }
         oneCell.setShipName(ship.getShipName());
     }
@@ -168,16 +189,20 @@ public class GameInstance {
         if (isHorizontal)
             for (int i = 0; i < shipSize; i++) {
                 oneCell = battleBoard.getBattleCells()[x + i][y];
-                if (oneCell.isContainsShip()) flag = false;
+                if (oneCell.isContainsShip() || oneCell.isGreyArea()) flag = false;
             }
         else
             for (int i = 0; i < shipSize; i++) {
                 oneCell = battleBoard.getBattleCells()[x][y + i];
-                if (oneCell.isContainsShip()) flag = false;
+                if (oneCell.isContainsShip() || oneCell.isGreyArea()) flag = false;
             }
         return flag;
     }
 
+    /**
+     * Returns random true or false values
+     * @return Random true or false boolean value
+     */
     public boolean returnRandomBoolean() {
         return (Math.random() < 0.5);
     }

@@ -36,6 +36,11 @@ public class BattleCell {
     private Ship.ShipNameList shipName;
 
     /**
+     * Whether this cell belongs to the surroundings of a ship or not.
+     */
+    private boolean greyArea;
+
+    /**
      * Constructor initializing everything with <i>false.</i>. This values update in game time.
      */
     public BattleCell() {
