@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import {BattleboardComponent} from './components/battleboard/battleboard.component';
 
 /**
- * Empty component. Contains a link to start playing the game. This link is also shown in the score table component.
+ * @ignore
  */
 @Component({
   selector: 'app-root',

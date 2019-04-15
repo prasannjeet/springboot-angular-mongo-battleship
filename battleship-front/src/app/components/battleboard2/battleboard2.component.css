@@ -9,7 +9,8 @@ table.battleshipBoard {
   background: darkgreen; }
 
 .attacked {
-  background: indianred; }
+  border-collapse: collapse;
+  background: repeating-linear-gradient(45deg, #ccc, #ccc 10px, #aaa 10px, #aaa 20px); }
 
 .keepInCenter {
   width: auto !important;

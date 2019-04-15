@@ -4,6 +4,9 @@ import {BattleboardComponent} from './components/battleboard/battleboard.compone
 import {Battleboard2Component} from './components/battleboard2/battleboard2.component';
 import {ScoreTableComponent} from './components/score-table/score-table.component';
 
+/**
+ * Defines diffeent routes for comonents in the project.
+ */
 const routes: Routes = [{
     path: 'battleboard',
     component: BattleboardComponent
