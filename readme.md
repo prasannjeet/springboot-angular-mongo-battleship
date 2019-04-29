@@ -1,5 +1,3 @@
-Note: This app has been updated after the submission. An earlier snapshot of the application can be obtained from [here](https://github.com/prasannjeet/springboot-angular-mongo-battleship/tree/585201e7b62f6ec1759f9bdb6af60addd0f666bd).
-
 # Battleship
 
 #### <img src="https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/cloud.svg" width="35" height="35"/> The application is deployed in Heroku and can be viewed [here](https://battlefield-spring.herokuapp.com/#/battleboard).
@@ -86,14 +84,14 @@ The yellow nodes represent packages and blue nodes represent classes.
 ### Routes
 ![Routes](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/routes.svg)
 
-The front-end was built in angular as it makes it easier and organized for bigger applications. Although Battleship is a small game, dividing various parts into components will make it easy to upgrade in future. There three components in this applicaton:
+The front-end was built in angular as it makes it easier and organized for bigger applications. Although Battleship is a small game, dividing various parts into components will make it easy to upgrade in future. There are three components in this applicaton:
 
-1. BattleBoard, and
-2. BattleBoard2
+1. BattleBoard,
+2. BattleBoard2, and
 3. ScoreTable
 
 
-Both are the same design and almost same functions. They are the main web-app for player1, and player2. The game always works in pairs; when the first component is instantiated, it contains a link, which when clicked, instantiates the second component.
+Both `BattleBoard` and `BattleBoard2` have the same design and almost same functions. They are the main web-app for player1 and player2 respectively. The game always works in pairs; when the first component for player1 is instantiated, it contains a link, which when clicked, instantiates the second component for player2. `ScoreTable` is a component used to display scores of the players.
 
 ### GUI and Services
 - The application is built with a minimal design where the left part contains the player's board with her ship positions that were initialized randomly. Further, the right half contains an empty board through which the other player can be attacked by clicking a particular cell. ![Game-View](https://github.com/prasannjeet/springboot-angular-mongo-battleship/blob/master/resources/gameView.png)
